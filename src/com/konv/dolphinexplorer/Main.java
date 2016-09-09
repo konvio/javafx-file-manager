@@ -13,15 +13,15 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private FilePane leftPane;
-    private FilePane rightPane;
+    private FileListView leftPane;
+    private FileListView rightPane;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         VBox root = new VBox();
 
-        leftPane = new FilePane();
-        rightPane = new FilePane();
+        leftPane = new FileListView("C://");
+        rightPane = new FileListView("D://");
         HBox hBox = new HBox(leftPane, rightPane);
 
         HBox.setHgrow(leftPane, Priority.ALWAYS);
