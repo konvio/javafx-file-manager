@@ -20,8 +20,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         VBox root = new VBox();
 
-        leftPane = new FileListView("C://");
-        rightPane = new FileListView("D://");
+        leftPane = new FileListView("C:\\");
+        rightPane = new FileListView("D:\\");
         HBox hBox = new HBox(leftPane, rightPane);
 
         HBox.setHgrow(leftPane, Priority.ALWAYS);

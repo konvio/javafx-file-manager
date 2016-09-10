@@ -9,13 +9,26 @@ import java.util.Arrays;
 
 public class FileListView extends ListView<String> {
 
+    private File directory;
     private String path;
+    private String home;
     private ObservableList<String> children;
 
     public FileListView(String path) {
         super();
         this.path = path;
+        home = path;
         children = FXCollections.observableArrayList();
+        setOnKeyPressed((key) -> {
+            switch (key.getCode()) {
+                case ENTER:
+                    navigate(getSelectionModel().getSelectedItem());
+                    break;
+                case BACK_SPACE:
+                    back();
+                    break;
+            }
+        });
         setItems(children);
         showList(getCurrentFilesList());
     }
@@ -32,6 +45,28 @@ public class FileListView extends ListView<String> {
         if (list != null) {
             children.clear();
             children.addAll(list);
+        }
+    }
+
+    private void gotoDirectory(String directory) {
+        path = directory;
+        showList(getCurrentFilesList());
+    }
+
+    private void navigate(String name) {
+        String directoryPath = path + "\\" + name;
+        File directory = new File(directoryPath);
+        if (directory.isDirectory()) {
+            path = directory.getPath();
+            showList(getCurrentFilesList());
+        }
+    }
+
+    private void back() {
+        if (path.lastIndexOf("/") != 0) {
+            gotoDirectory(path.substring(0, path.lastIndexOf("\\")));
+        } else {
+            gotoDirectory(home);
         }
     }
 }
