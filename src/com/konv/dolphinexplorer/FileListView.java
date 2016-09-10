@@ -2,7 +2,8 @@ package com.konv.dolphinexplorer;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
+import javafx.scene.control.TextField;
 
 import java.awt.*;
 import java.io.File;
@@ -11,12 +12,17 @@ import java.util.Arrays;
 public class FileListView extends ListView<String> {
 
     private File mDirectory;
+    private TextField mTextField;
     private ObservableList<String> mChildrenList;
 
     public FileListView(String path) {
         super();
         mDirectory = new File(path);
         mChildrenList = FXCollections.observableArrayList();
+        mTextField = new TextField();
+        mTextField.setStyle("-fx-font-size: 10px;");
+        mTextField.setOnAction(e -> goToFile(mTextField.getText()));
+
         setOnKeyPressed((key) -> {
             switch (key.getCode()) {
                 case ENTER:
@@ -29,6 +35,11 @@ public class FileListView extends ListView<String> {
         });
         setItems(mChildrenList);
         showList(getCurrentFilesList());
+        updateTextField();
+    }
+
+    public TextField getTextField() {
+        return mTextField;
     }
 
     private String[] getCurrentFilesList() {
@@ -62,15 +73,39 @@ public class FileListView extends ListView<String> {
         }
     }
 
-    private void navigate(String name) {
-        String directoryPath = mDirectory.getAbsolutePath() + File.separator + name;
-        File directory = new File(directoryPath);
-        if (directory.isDirectory()) {
-            mDirectory = directory;
+    private void goToFile(String path) {
+        File file = new File(path);
+        if (!file.exists()) {
+            updateTextField();
+            return;
+        }
+        if (file.isDirectory()) {
+            mDirectory = file;
             showList(getCurrentFilesList());
+            updateTextField();
+        } else if (file.isFile()) {
+            try {
+                Desktop.getDesktop().open(file);
+            } catch (Exception e) {
+
+            }
+        }
+    }
+
+    private void updateTextField() {
+        mTextField.setText(mDirectory.getAbsolutePath());
+    }
+
+    private void navigate(String name) {
+        String selectedPath = mDirectory.getAbsolutePath() + File.separator + name;
+        File selectedFile = new File(selectedPath);
+        if (selectedFile.isDirectory()) {
+            mDirectory = selectedFile;
+            showList(getCurrentFilesList());
+            updateTextField();
         } else {
             try {
-                Desktop.getDesktop().open(directory);
+                Desktop.getDesktop().open(selectedFile);
             } catch (Exception e) {
 
             }
@@ -82,6 +117,7 @@ public class FileListView extends ListView<String> {
         if (parent != null) {
             mDirectory = parent;
             showList(getCurrentFilesList());
+            updateTextField();
         }
     }
 }

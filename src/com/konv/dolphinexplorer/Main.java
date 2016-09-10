@@ -1,15 +1,18 @@
 package com.konv.dolphinexplorer;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.scene.Scene;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main extends Application {
 
@@ -20,15 +23,25 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         VBox root = new VBox();
 
-        leftPane = new FileListView("C:\\");
-        rightPane = new FileListView("D:\\");
-        HBox hBox = new HBox(leftPane, rightPane);
+        File[] roots = File.listRoots();
+        String leftPanePath = roots[0].getPath();
+        String rightPanePath = roots.length > 1 ? roots[1].getPath() : leftPanePath;
 
-        HBox.setHgrow(leftPane, Priority.ALWAYS);
-        HBox.setHgrow(rightPane, Priority.ALWAYS);
-        VBox.setVgrow(hBox, Priority.ALWAYS);
+        leftPane = new FileListView(leftPanePath);
+        rightPane = new FileListView(rightPanePath);
 
-        root.getChildren().addAll(getMenuBar(), hBox);
+        VBox leftPaneText = new VBox(leftPane.getTextField(), leftPane);
+        VBox rightPaneText = new VBox(rightPane.getTextField(), rightPane);
+
+        VBox.setVgrow(leftPane, Priority.ALWAYS);
+        VBox.setVgrow(rightPane, Priority.ALWAYS);
+
+        HBox fileManagerHBox = new HBox(leftPaneText, rightPaneText);
+        HBox.setHgrow(leftPaneText, Priority.ALWAYS);
+        HBox.setHgrow(rightPaneText, Priority.ALWAYS);
+        VBox.setVgrow(fileManagerHBox, Priority.ALWAYS);
+
+        root.getChildren().addAll(getMenuBar(), fileManagerHBox, getToolBar());
         primaryStage.setTitle("Dolphin Explorer");
         primaryStage.setScene(new Scene(root, 700, 500));
         primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("dolphin.png")));
@@ -53,5 +66,11 @@ public class Main extends Application {
         helpMenu.getItems().addAll(aboutMenuItem);
 
         return new MenuBar(fileMenu, toolsMenu, helpMenu);
+    }
+
+    private ToolBar getToolBar() {
+        Label label = new Label("F6 Move");
+        ToolBar toolBar = new ToolBar(new Label("F5 Copy"), new Separator(), label);
+        return toolBar;
     }
 }
