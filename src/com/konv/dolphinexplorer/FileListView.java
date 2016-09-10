@@ -1,5 +1,6 @@
 package com.konv.dolphinexplorer;
 
+import com.sun.istack.internal.NotNull;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
@@ -31,10 +32,24 @@ public class FileListView extends ListView<String> {
     }
 
     private String[] getCurrentFilesList() {
-        String[] list = mDirectory.list();
-        if (list != null) {
-            Arrays.sort(list);
+        File[] listFiles = mDirectory.listFiles(file -> !file.isHidden());
+
+        if (listFiles == null) {
+            listFiles = new File[0];
         }
+
+        Arrays.sort(listFiles, (f1, f2) -> {
+            if ((f1.isDirectory() && f2.isDirectory()) || (f1.isFile() && f2.isFile())) {
+                return f1.compareTo(f2);
+            }
+            return f1.isDirectory() ? -1 : 1;
+        });
+
+        String[] list = new String[listFiles.length];
+        for (int i = 0; i < list.length; ++i) {
+            list[i] = listFiles[i].getName();
+        }
+
         return list;
     }
 
