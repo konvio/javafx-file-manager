@@ -9,16 +9,13 @@ import java.util.Arrays;
 
 public class FileListView extends ListView<String> {
 
-    private File directory;
-    private String path;
-    private String home;
-    private ObservableList<String> children;
+    private File mDirectory;
+    private ObservableList<String> mChildrenList;
 
     public FileListView(String path) {
         super();
-        this.path = path;
-        home = path;
-        children = FXCollections.observableArrayList();
+        mDirectory = new File(path);
+        mChildrenList = FXCollections.observableArrayList();
         setOnKeyPressed((key) -> {
             switch (key.getCode()) {
                 case ENTER:
@@ -29,12 +26,12 @@ public class FileListView extends ListView<String> {
                     break;
             }
         });
-        setItems(children);
+        setItems(mChildrenList);
         showList(getCurrentFilesList());
     }
 
     private String[] getCurrentFilesList() {
-        String[] list = (new File(path)).list();
+        String[] list = mDirectory.list();
         if (list != null) {
             Arrays.sort(list);
         }
@@ -43,30 +40,27 @@ public class FileListView extends ListView<String> {
 
     private void showList(String[] list) {
         if (list != null) {
-            children.clear();
-            children.addAll(list);
+            mChildrenList.clear();
+            mChildrenList.addAll(list);
+        } else {
+            mChildrenList.clear();
         }
     }
 
-    private void gotoDirectory(String directory) {
-        path = directory;
-        showList(getCurrentFilesList());
-    }
-
     private void navigate(String name) {
-        String directoryPath = path + "\\" + name;
+        String directoryPath = mDirectory.getAbsolutePath() + File.separator + name;
         File directory = new File(directoryPath);
         if (directory.isDirectory()) {
-            path = directory.getPath();
+            mDirectory = directory;
             showList(getCurrentFilesList());
         }
     }
 
     private void back() {
-        if (path.lastIndexOf("/") != 0) {
-            gotoDirectory(path.substring(0, path.lastIndexOf("\\")));
-        } else {
-            gotoDirectory(home);
+        File parent = mDirectory.getParentFile();
+        if (parent != null) {
+            mDirectory = parent;
+            showList(getCurrentFilesList());
         }
     }
 }
