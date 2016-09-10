@@ -1,10 +1,10 @@
 package com.konv.dolphinexplorer;
 
-import com.sun.istack.internal.NotNull;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
 
+import java.awt.*;
 import java.io.File;
 import java.util.Arrays;
 
@@ -68,6 +68,12 @@ public class FileListView extends ListView<String> {
         if (directory.isDirectory()) {
             mDirectory = directory;
             showList(getCurrentFilesList());
+        } else {
+            try {
+                Desktop.getDesktop().open(directory);
+            } catch (Exception e) {
+
+            }
         }
     }
 
