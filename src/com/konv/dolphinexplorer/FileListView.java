@@ -104,20 +104,22 @@ public class FileListView extends ListView<String> {
     public void createDirectory() {
         String title = "Create Directory";
         String name = DialogHelper.showTextInputDialog(title, null, "Enter new directory name", "New Directory");
-        File newFile = new File(mDirectory.getAbsolutePath() + File.separator + name);
-        if (newFile.exists()) {
-            DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "Directory already exists");
-            return;
-        }
-        try {
-            boolean isCreated = newFile.mkdir();
-            if (isCreated) {
-                refresh();
-            } else {
-                DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "Something went wrong");
+        if (name != null) {
+            File newFile = new File(mDirectory.getAbsolutePath() + File.separator + name);
+            if (newFile.exists()) {
+                DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "Directory already exists");
+                return;
             }
-        } catch (Exception e) {
-            DialogHelper.showAlert(Alert.AlertType.ERROR, title, null, "An error occurred");
+            try {
+                boolean isCreated = newFile.mkdir();
+                if (isCreated) {
+                    refresh();
+                } else {
+                    DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "Something went wrong");
+                }
+            } catch (Exception e) {
+                DialogHelper.showAlert(Alert.AlertType.ERROR, title, null, "An error occurred");
+            }
         }
     }
 
@@ -135,6 +137,7 @@ public class FileListView extends ListView<String> {
                     DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "Can`t delete file");
                 }
             } catch (Exception e) {
+                System.out.println(e.toString());
                 DialogHelper.showAlert(Alert.AlertType.ERROR, title, null, "An error occurred");
             }
         }
@@ -183,6 +186,7 @@ public class FileListView extends ListView<String> {
 
     public File getSelectedFile() {
         String name = getSelectionModel().getSelectedItem();
+        if (name == null) return null;
         return new File(mDirectory.getAbsolutePath() + File.separator + name);
     }
 

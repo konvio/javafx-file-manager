@@ -10,6 +10,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.nio.file.Path;
 
 public class Main extends Application {
 
@@ -39,6 +40,16 @@ public class Main extends Application {
         VBox.setVgrow(fileManagerHBox, Priority.ALWAYS);
 
         root.getChildren().addAll(getMenuBar(), fileManagerHBox, getToolBar());
+        root.setOnKeyPressed(key -> {
+            switch (key.getCode()) {
+                case F5:
+                    copy();
+                    break;
+                case F6:
+                    move();
+                    break;
+            }
+        });
         primaryStage.setTitle("Dolphin Explorer");
         primaryStage.setScene(new Scene(root, 700, 500));
         primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("dolphin.png")));
@@ -50,15 +61,54 @@ public class Main extends Application {
     }
 
     private MenuBar getMenuBar() {
-        Menu fileMenu = new Menu("_File");
-        MenuItem exitMenuItem = new MenuItem("E_xit");
-        fileMenu.getItems().addAll(exitMenuItem);
+        Menu fileMenu = new Menu("File");
 
-        Menu toolsMenu = new Menu("_Tools");
-        MenuItem textProcessMenuItem = new MenuItem("Process Text");
-        toolsMenu.getItems().addAll(textProcessMenuItem);
+        // Create file menu
+        MenuItem newFile = new MenuItem("New File");
+        newFile.setOnAction(e -> {
+            FileListView focusedPane = getFocusedPane();
+            if (focusedPane == null) return;
+            focusedPane.createFile();
+        });
+        newFile.setAccelerator(FileListView.SHORTCUT_NEW_FILE);
 
-        Menu helpMenu = new Menu("_Help");
+        MenuItem newFolder = new MenuItem("New Folder     ");
+        newFolder.setOnAction(e -> {
+            FileListView focusedPane = getFocusedPane();
+            if (focusedPane == null) return;
+            focusedPane.createDirectory();
+        });
+        newFolder.setAccelerator(FileListView.SHORTCUT_NEW_DIRECTORY);
+
+        MenuItem refreshItem = new MenuItem("Refresh");
+        refreshItem.setOnAction(e -> {
+            leftPane.refresh();
+            rightPane.refresh();
+        });
+        refreshItem.setAccelerator(FileListView.SHORTCUT_REFRESH);
+
+        MenuItem renameItem = new MenuItem("Rename");
+        renameItem.setOnAction(e -> {
+            FileListView focusedPane = getFocusedPane();
+            if (focusedPane != null) {
+                focusedPane.rename();
+            }
+        });
+        renameItem.setAccelerator(FileListView.SHORTCUT_RENAME);
+
+        MenuItem deleteItem = new MenuItem("Delete");
+        deleteItem.setOnAction(e -> {
+            FileListView focusedPane = getFocusedPane();
+            if (focusedPane != null) {
+                focusedPane.delete();
+            }
+        });
+        deleteItem.setAccelerator(FileListView.SHORTCUT_DELETE);
+
+        fileMenu.getItems().addAll(newFile, newFolder, refreshItem, renameItem, deleteItem);
+
+        //Create helpMenu
+        Menu helpMenu = new Menu("Help");
         MenuItem aboutMenuItem = new MenuItem("About");
         aboutMenuItem.setOnAction(e -> {
             DialogHelper.showAlert(Alert.AlertType.INFORMATION, "About", null,
@@ -66,13 +116,56 @@ public class Main extends Application {
         });
         helpMenu.getItems().addAll(aboutMenuItem);
 
-        return new MenuBar(fileMenu, toolsMenu, helpMenu);
+        return new MenuBar(fileMenu, helpMenu);
     }
 
     private ToolBar getToolBar() {
         Label labelCopy = new Label("F5 Copy");
+        labelCopy.setOnMouseClicked(e -> copy());
+
         Label labelMove = new Label("F6 Move");
+        labelMove.setOnMouseClicked(e -> move());
 
         return new ToolBar(labelCopy, new Separator(), labelMove);
+    }
+
+    private void copy() {
+        if (leftPane.isFocused()) {
+            Path source = leftPane.getSelectedFilePath();
+            Path target = rightPane.getDirectoryPath();
+            FileSystemHelper.copy(source, target);
+            rightPane.refresh();
+        } else if (rightPane.isFocused()) {
+            Path source = rightPane.getSelectedFilePath();
+            Path target = leftPane.getDirectoryPath();
+            FileSystemHelper.copy(source, target);
+            leftPane.refresh();
+        }
+    }
+
+    private void move() {
+        if (leftPane.isFocused()) {
+            Path source = leftPane.getSelectedFilePath();
+            Path target = rightPane.getDirectoryPath();
+            FileSystemHelper.move(source, target);
+            leftPane.refresh();
+            rightPane.refresh();
+        } else if (rightPane.isFocused()) {
+            Path source = rightPane.getSelectedFilePath();
+            Path target = leftPane.getDirectoryPath();
+            FileSystemHelper.move(source, target);
+            leftPane.refresh();
+            rightPane.refresh();
+        }
+    }
+
+    private FileListView getFocusedPane() {
+        if (leftPane.isFocused()) {
+            return leftPane;
+        } else if (rightPane.isFocused()) {
+            return rightPane;
+        } else {
+            return null;
+        }
     }
 }
