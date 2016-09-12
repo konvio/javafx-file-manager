@@ -33,7 +33,13 @@ public class FileListView extends ListView<String> {
                     break;
             }
         });
+
         setItems(mChildrenList);
+        showList(getCurrentFilesList());
+        updateTextField();
+    }
+
+    public void refresh() {
         showList(getCurrentFilesList());
         updateTextField();
     }
@@ -81,8 +87,7 @@ public class FileListView extends ListView<String> {
         }
         if (file.isDirectory()) {
             mDirectory = file;
-            showList(getCurrentFilesList());
-            updateTextField();
+            refresh();
         } else if (file.isFile()) {
             try {
                 Desktop.getDesktop().open(file);
@@ -101,8 +106,7 @@ public class FileListView extends ListView<String> {
         File selectedFile = new File(selectedPath);
         if (selectedFile.isDirectory()) {
             mDirectory = selectedFile;
-            showList(getCurrentFilesList());
-            updateTextField();
+            refresh();
         } else {
             try {
                 Desktop.getDesktop().open(selectedFile);
@@ -116,8 +120,7 @@ public class FileListView extends ListView<String> {
         File parent = mDirectory.getParentFile();
         if (parent != null) {
             mDirectory = parent;
-            showList(getCurrentFilesList());
-            updateTextField();
+            refresh();
         }
     }
 }

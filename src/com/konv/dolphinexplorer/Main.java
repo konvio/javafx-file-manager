@@ -1,7 +1,6 @@
 package com.konv.dolphinexplorer;
 
 import javafx.application.Application;
-import javafx.collections.FXCollections;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -11,8 +10,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main extends Application {
 
@@ -69,8 +66,16 @@ public class Main extends Application {
     }
 
     private ToolBar getToolBar() {
-        Label label = new Label("F6 Move");
-        ToolBar toolBar = new ToolBar(new Label("F5 Copy"), new Separator(), label);
-        return toolBar;
+        Label labelRefresh = new Label("F2 Refresh");
+        Label labelOpen = new Label("F3 Open");
+        Label labelNewFile = new Label("F4 NewFile");
+        Label labelCopy = new Label("F5 Copy");
+        Label labelMove = new Label("F6 Move");
+        Label labelNewFolder = new Label("F7 NewFolder");
+        Label labelDelete = new Label("F8 Delete");
+        Label labelExit = new Label("F9 Exit");
+        return new ToolBar(labelRefresh, new Separator(), labelOpen, new Separator(), labelNewFile, new Separator(),
+                labelCopy, new Separator(), labelMove, new Separator(), labelNewFolder, new Separator(), labelDelete,
+                new Separator(), labelExit);
     }
 }
