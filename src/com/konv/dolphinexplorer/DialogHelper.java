@@ -3,6 +3,7 @@ package com.konv.dolphinexplorer;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextInputDialog;
+import javafx.stage.StageStyle;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;

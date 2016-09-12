@@ -60,22 +60,19 @@ public class Main extends Application {
 
         Menu helpMenu = new Menu("_Help");
         MenuItem aboutMenuItem = new MenuItem("About");
+        aboutMenuItem.setOnAction(e -> {
+            DialogHelper.showAlert(Alert.AlertType.INFORMATION, "About", null,
+                    "Dolphin Explorer\n\n" + "Copyright © 2016 by Vitaliy Kononenko\nK-24");
+        });
         helpMenu.getItems().addAll(aboutMenuItem);
 
         return new MenuBar(fileMenu, toolsMenu, helpMenu);
     }
 
     private ToolBar getToolBar() {
-        Label labelRefresh = new Label("F2 Refresh");
-        Label labelOpen = new Label("F3 Open");
-        Label labelNewFile = new Label("F4 NewFile");
         Label labelCopy = new Label("F5 Copy");
         Label labelMove = new Label("F6 Move");
-        Label labelNewFolder = new Label("F7 NewFolder");
-        Label labelDelete = new Label("F8 Delete");
-        Label labelExit = new Label("F9 Exit");
-        return new ToolBar(labelRefresh, new Separator(), labelOpen, new Separator(), labelNewFile, new Separator(),
-                labelCopy, new Separator(), labelMove, new Separator(), labelNewFolder, new Separator(), labelDelete,
-                new Separator(), labelExit);
+
+        return new ToolBar(labelCopy, new Separator(), labelMove);
     }
 }
