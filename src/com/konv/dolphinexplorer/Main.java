@@ -60,30 +60,42 @@ public class Main extends Application {
         scene.addEventFilter(KeyEvent.KEY_RELEASED, e -> {
             if (SHORTCUT_DELETE.match(e)) {
                 ListView focusedPane = getFocusedPane();
-                if (focusedPane != null) FileHelper.delete(focusedPane.getSelection());
+                if (focusedPane != null) {
+                    FileHelper.delete(focusedPane.getSelection());
+                    focusedPane.refresh();
+                }
             } else if (SHORTCUT_REFRESH.match(e)) {
                 leftPane.refresh();
                 rightPane.refresh();
             } else if (SHORTCUT_NEW_FILE.match(e)) {
                 ListView focusedPane = getFocusedPane();
-                if (focusedPane != null) FileHelper.createFile(focusedPane.getDirectory());
+                if (focusedPane != null) {
+                    FileHelper.createFile(focusedPane.getDirectory());
+                    focusedPane.refresh();
+                }
             } else if (SHORTCUT_NEW_DIRECTORY.match(e)) {
                 ListView focusedPane = getFocusedPane();
-                if (focusedPane != null) FileHelper.createDirectory(focusedPane.getDirectory());
+                if (focusedPane != null) {
+                    FileHelper.createDirectory(focusedPane.getDirectory());
+                    focusedPane.refresh();
+                }
             } else if (SHORTCUT_RENAME.match(e)) {
                 ListView focusedPane = getFocusedPane();
-                if (focusedPane != null) FileHelper.rename(focusedPane.getSelection());
+                if (focusedPane != null) {
+                    FileHelper.rename(focusedPane.getSelection());
+                    focusedPane.refresh();
+                }
             } else if (SHORTCUT_COPY.match(e)) {
                 copy();
             } else if (SHORTCUT_MOVE.match(e)) {
                 move();
-            } else if ((new KeyCodeCombination(KeyCode.ENTER)).match(e)) {
-            }});
+            }
+        });
 
-            primaryStage.setTitle("Dolphin Explorer");
-            primaryStage.setScene(scene);
-            primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("dolphin.png")));
-            primaryStage.show();
+        primaryStage.setTitle("Dolphin Explorer");
+        primaryStage.setScene(scene);
+        primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("dolphin.png")));
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
@@ -97,7 +109,9 @@ public class Main extends Application {
         MenuItem newFile = new MenuItem("New File");
         newFile.setOnAction(e -> {
             ListView focusedPane = getFocusedPane();
-            if (focusedPane != null) FileHelper.createFile(focusedPane.getDirectory());
+            if (focusedPane != null) {
+                FileHelper.createFile(focusedPane.getDirectory());
+            }
         });
         newFile.setAccelerator(SHORTCUT_NEW_FILE);
 
