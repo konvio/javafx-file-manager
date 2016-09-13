@@ -1,11 +1,12 @@
 package com.konv.dolphinexplorer;
 
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextInputDialog;
-import javafx.stage.StageStyle;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import org.jetbrains.annotations.Nullable;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.Optional;
 
 import static javafx.scene.control.Alert.AlertType;
@@ -39,5 +40,37 @@ public class DialogHelper {
 
         Optional<String> result = dialog.showAndWait();
         return result.isPresent() ? result.get() : null;
+    }
+
+    public static void showException(Exception e) {
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText("Something went wrong");
+        alert.setContentText(e.toString());
+
+        StringWriter stringWriter = new StringWriter();
+        PrintWriter printWriter = new PrintWriter(stringWriter);
+        e.printStackTrace(printWriter);
+        String exceptionText = printWriter.toString();
+
+        Label label = new Label("Exception stacktrace:");
+
+        TextArea textArea = new TextArea(exceptionText);
+        textArea.setEditable(false);
+        textArea.setWrapText(true);
+
+        textArea.setMaxWidth(Double.MAX_VALUE);
+        textArea.setMaxHeight(Double.MAX_VALUE);
+        GridPane.setVgrow(textArea, Priority.ALWAYS);
+        GridPane.setHgrow(textArea, Priority.ALWAYS);
+
+        GridPane expandableContent = new GridPane();
+        expandableContent.setMaxWidth(Double.MAX_VALUE);
+        expandableContent.add(label, 0, 0);
+        expandableContent.add(textArea, 0, 1);
+
+        alert.getDialogPane().setExpandableContent(expandableContent);
+
+        alert.showAndWait();
     }
 }

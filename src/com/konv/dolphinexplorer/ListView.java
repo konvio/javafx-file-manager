@@ -2,8 +2,6 @@ package com.konv.dolphinexplorer;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
@@ -11,11 +9,10 @@ import javafx.scene.input.KeyCombination;
 
 import java.awt.*;
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Arrays;
 
-public class FileListView extends ListView<String> {
+public class ListView extends javafx.scene.control.ListView<String> {
 
     public static final KeyCombination SHORTCUT_NAVIGATE = new KeyCodeCombination(KeyCode.ENTER);
     public static final KeyCombination SHORTCUT_BACK = new KeyCodeCombination(KeyCode.BACK_SPACE);
@@ -31,7 +28,7 @@ public class FileListView extends ListView<String> {
     private TextField mTextField;
     private ObservableList<String> mChildrenList;
 
-    public FileListView(String path) {
+    public ListView(String path) {
         super();
         mDirectory = new File(path);
 
@@ -73,93 +70,31 @@ public class FileListView extends ListView<String> {
     }
 
     public Path getSelectedFilePath() {
-        File file = getSelectedFile();
+        File file = getSelection();
         return file.toPath();
     }
 
-    public Path getDirectoryPath() {
+    public Path getDirectory() {
         return mDirectory.toPath();
     }
 
     public void createFile() {
-        String title = "Create File";
-        String name = DialogHelper.showTextInputDialog(title, null, "Enter filename", "New File.txt");
-        File newFile = new File(mDirectory.getAbsolutePath() + File.separator + name);
-        if (newFile.exists()) {
-            DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "File already exists");
-            return;
-        }
-        try {
-            boolean isCreated = newFile.createNewFile();
-            if (isCreated) {
-                refresh();
-            } else {
-                DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "Something went wrong");
-            }
-        } catch (IOException e) {
-            DialogHelper.showAlert(Alert.AlertType.ERROR, title, null, "An error occurred");
-        }
+        FileHelper.createFile(getDirectory());
+        refresh();
     }
 
     public void createDirectory() {
-        String title = "Create Directory";
-        String name = DialogHelper.showTextInputDialog(title, null, "Enter new directory name", "New Directory");
-        if (name != null) {
-            File newFile = new File(mDirectory.getAbsolutePath() + File.separator + name);
-            if (newFile.exists()) {
-                DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "Directory already exists");
-                return;
-            }
-            try {
-                boolean isCreated = newFile.mkdir();
-                if (isCreated) {
-                    refresh();
-                } else {
-                    DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "Something went wrong");
-                }
-            } catch (Exception e) {
-                DialogHelper.showAlert(Alert.AlertType.ERROR, title, null, "An error occurred");
-            }
-        }
+        FileHelper.createDirectory(getDirectory());
+        refresh();
     }
 
     public void delete() {
-        String title = "Delete";
-        File file = getSelectedFile();
-        boolean deletionConfirmed = DialogHelper.showConfirmationDialog(title, null, "Do you really want to delete " +
-                file.getName() + "?");
-        if (deletionConfirmed) {
-            try {
-                boolean isDeleted = file.delete();
-                if (isDeleted) {
-                    refresh();
-                } else {
-                    DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "Can`t delete file");
-                }
-            } catch (Exception e) {
-                System.out.println(e.toString());
-                DialogHelper.showAlert(Alert.AlertType.ERROR, title, null, "An error occurred");
-            }
-        }
+        FileHelper.delete(getSelectedFilePath());
     }
 
     public void rename() {
-        String title = "Rename";
-        File file = getSelectedFile();
-        String name = DialogHelper.showTextInputDialog(title, null, "Enter new name", file.getName());
-        if (name != null) {
-            File renamedFile = new File(mDirectory.getAbsolutePath() + File.separator + name);
-            try {
-                boolean isRenamed = file.renameTo(renamedFile);
-                if (isRenamed) {
-                    refresh();
-                } else {
-                    DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "Something went wrong");
-                }
-            } catch (Exception e) {
-                DialogHelper.showAlert(Alert.AlertType.WARNING, title, null, "An error occurred");
-            }
-        }
+        FileHelper.rename(getSelectedFilePath());
+        refresh();
     }
 
     private String[] getCurrentFilesList() {
@@ -184,7 +119,7 @@ public class FileListView extends ListView<String> {
         return list;
     }
 
-    public File getSelectedFile() {
+    public File getSelection() {
         String name = getSelectionModel().getSelectedItem();
         if (name == null) return null;
         return new File(mDirectory.getAbsolutePath() + File.separator + name);
@@ -231,7 +166,7 @@ public class FileListView extends ListView<String> {
             try {
                 Desktop.getDesktop().open(selectedFile);
             } catch (Exception e) {
-
+                DialogHelper.showException(e);
             }
         }
     }
