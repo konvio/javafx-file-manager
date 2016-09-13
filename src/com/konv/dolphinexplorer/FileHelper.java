@@ -8,21 +8,19 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 public class FileHelper {
 
-    public static boolean copy(Path source, Path targetDirectory) {
+    public static void copy(Path source, Path targetDirectory) {
         try {
             Files.copy(source, targetDirectory.resolve(source.getFileName()), StandardCopyOption.REPLACE_EXISTING);
-            return true;
         } catch (Exception e) {
-            return false;
+            DialogHelper.showException(e);
         }
     }
 
-    public static boolean move(Path source, Path targetDirectory) {
+    public static void move(Path source, Path targetDirectory) {
         try {
             Files.move(source, targetDirectory.resolve(source.getFileName()), StandardCopyOption.REPLACE_EXISTING);
-            return true;
         } catch (Exception e) {
-            return false;
+            DialogHelper.showException(e);
         }
     }
 

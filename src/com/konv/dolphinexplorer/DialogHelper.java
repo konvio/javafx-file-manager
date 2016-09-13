@@ -3,6 +3,7 @@ package com.konv.dolphinexplorer;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
+import javafx.stage.StageStyle;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.PrintWriter;
@@ -15,6 +16,7 @@ public class DialogHelper {
 
     public static void showAlert(AlertType alertType, String title, String header, String content) {
         Alert alert = new Alert(alertType);
+        alert.initStyle(StageStyle.UTILITY);
         alert.setTitle(title);
         alert.setHeaderText(header);
         alert.setContentText(content);
@@ -23,6 +25,7 @@ public class DialogHelper {
 
     public static boolean showConfirmationDialog(String title, String header, String content) {
         Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.initStyle(StageStyle.UTILITY);
         alert.setTitle(title);
         alert.setHeaderText(header);
         alert.setContentText(content);
@@ -34,6 +37,7 @@ public class DialogHelper {
     @Nullable
     public static String showTextInputDialog(String title, String header, String content, String hint) {
         TextInputDialog dialog = new TextInputDialog(hint);
+        dialog.initStyle(StageStyle.UTILITY);
         dialog.setTitle(title);
         dialog.setHeaderText(header);
         dialog.setContentText(content);
@@ -44,6 +48,7 @@ public class DialogHelper {
 
     public static void showException(Exception e) {
         Alert alert = new Alert(AlertType.ERROR);
+        alert.initStyle(StageStyle.UTILITY);
         alert.setTitle("Error");
         alert.setHeaderText("Something went wrong");
         alert.setContentText(e.toString());
