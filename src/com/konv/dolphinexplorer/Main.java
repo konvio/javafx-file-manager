@@ -21,7 +21,6 @@ public class Main extends Application {
     private static final KeyCombination SHORTCUT_COPY = new KeyCodeCombination(KeyCode.F5);
     private static final KeyCombination SHORTCUT_MOVE = new KeyCodeCombination(KeyCode.F6);
     private static final KeyCombination SHORTCUT_DELETE = new KeyCodeCombination(KeyCode.DELETE);
-    private static final KeyCombination SHORTCUT_REFRESH = new KeyCodeCombination(KeyCode.R, KeyCombination.CONTROL_DOWN);
     private static final KeyCombination SHORTCUT_NEW_FILE = new KeyCodeCombination(KeyCode.N,
             KeyCombination.SHORTCUT_DOWN);
     private static final KeyCombination SHORTCUT_NEW_DIRECTORY = new KeyCodeCombination(KeyCode.N,
@@ -62,28 +61,21 @@ public class Main extends Application {
                 ListView focusedPane = getFocusedPane();
                 if (focusedPane != null) {
                     FileHelper.delete(focusedPane.getSelection());
-                    focusedPane.refresh();
                 }
-            } else if (SHORTCUT_REFRESH.match(e)) {
-                leftPane.refresh();
-                rightPane.refresh();
             } else if (SHORTCUT_NEW_FILE.match(e)) {
                 ListView focusedPane = getFocusedPane();
                 if (focusedPane != null) {
                     FileHelper.createFile(focusedPane.getDirectory());
-                    focusedPane.refresh();
                 }
             } else if (SHORTCUT_NEW_DIRECTORY.match(e)) {
                 ListView focusedPane = getFocusedPane();
                 if (focusedPane != null) {
                     FileHelper.createDirectory(focusedPane.getDirectory());
-                    focusedPane.refresh();
                 }
             } else if (SHORTCUT_RENAME.match(e)) {
                 ListView focusedPane = getFocusedPane();
                 if (focusedPane != null) {
                     FileHelper.rename(focusedPane.getSelection());
-                    focusedPane.refresh();
                 }
             } else if (SHORTCUT_COPY.match(e)) {
                 copy();
@@ -122,13 +114,6 @@ public class Main extends Application {
         });
         newFolder.setAccelerator(SHORTCUT_NEW_DIRECTORY);
 
-        MenuItem refreshItem = new MenuItem("Refresh");
-        refreshItem.setOnAction(e -> {
-            leftPane.refresh();
-            rightPane.refresh();
-        });
-        refreshItem.setAccelerator(SHORTCUT_REFRESH);
-
         MenuItem renameItem = new MenuItem("Rename");
         renameItem.setOnAction(e -> {
             ListView focusedPane = getFocusedPane();
@@ -143,7 +128,7 @@ public class Main extends Application {
         });
         deleteItem.setAccelerator(SHORTCUT_DELETE);
 
-        fileMenu.getItems().addAll(newFile, newFolder, refreshItem, renameItem, deleteItem);
+        fileMenu.getItems().addAll(newFile, newFolder, renameItem, deleteItem);
 
         //Create helpMenu
         Menu helpMenu = new Menu("Help");
@@ -171,12 +156,10 @@ public class Main extends Application {
             Path source = leftPane.getSelection();
             Path target = rightPane.getDirectory();
             FileHelper.copy(source, target);
-            rightPane.refresh();
         } else if (rightPane.isFocused()) {
             Path source = rightPane.getSelection();
             Path target = leftPane.getDirectory();
             FileHelper.copy(source, target);
-            leftPane.refresh();
         }
     }
 
@@ -185,14 +168,10 @@ public class Main extends Application {
             Path source = leftPane.getSelection();
             Path target = rightPane.getDirectory();
             FileHelper.move(source, target);
-            leftPane.refresh();
-            rightPane.refresh();
         } else if (rightPane.isFocused()) {
             Path source = rightPane.getSelection();
             Path target = leftPane.getDirectory();
             FileHelper.move(source, target);
-            leftPane.refresh();
-            rightPane.refresh();
         }
     }
 
