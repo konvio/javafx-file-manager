@@ -15,6 +15,8 @@ public class ListView extends javafx.scene.control.ListView<String> {
     private TextField mTextField;
     private ObservableList<String> mChildrenList;
 
+    private WatchServiceHelper mWatchServiceHelper;
+
     public ListView(String path) {
         super();
         mDirectory = new File(path);
@@ -26,23 +28,26 @@ public class ListView extends javafx.scene.control.ListView<String> {
         mTextField.setStyle("-fx-font-size: 10px;");
         mTextField.setOnAction(e -> goToFile(mTextField.getText()));
 
-        setOnKeyReleased(key -> {
+        setOnKeyPressed(key -> {
             switch (key.getCode()) {
                 case ENTER:
-                    navigate(getSelectionModel().getSelectedItem());
+                    if (isFocused()) {
+                        navigate(getSelectionModel().getSelectedItem());
+                    }
                     break;
                 case BACK_SPACE:
                     back();
                     break;
             }
         });
-
         refresh();
+        mWatchServiceHelper = new WatchServiceHelper(this);
     }
 
     public void refresh() {
         showList(getCurrentFilesList());
         mTextField.setText(mDirectory.getAbsolutePath());
+        mWatchServiceHelper.changeObservableDirectory(mDirectory.toPath());
     }
 
     public TextField getTextField() {
