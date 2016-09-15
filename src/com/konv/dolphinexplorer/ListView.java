@@ -40,8 +40,8 @@ public class ListView extends javafx.scene.control.ListView<String> {
                     break;
             }
         });
-        refresh();
         mWatchServiceHelper = new WatchServiceHelper(this);
+        refresh();
     }
 
     public void refresh() {

@@ -8,13 +8,9 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import java.io.File;
-import java.nio.file.Path;
 
 public class Main extends Application {
 
@@ -27,60 +23,33 @@ public class Main extends Application {
             KeyCombination.SHORTCUT_DOWN, KeyCombination.SHIFT_DOWN);
     private static final KeyCombination SHORTCUT_RENAME = new KeyCodeCombination(KeyCode.F6, KeyCombination.SHIFT_DOWN);
 
-    private ListView leftPane;
-    private ListView rightPane;
+    private FileView mFileView;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         VBox root = new VBox();
 
-        File[] roots = File.listRoots();
-        String leftPanePath = roots[0].getPath();
-        String rightPanePath = roots.length > 1 ? roots[1].getPath() : leftPanePath;
+        mFileView = new FileView();
 
-        leftPane = new ListView(leftPanePath);
-        rightPane = new ListView(rightPanePath);
+        VBox.setVgrow(mFileView, Priority.ALWAYS);
 
-        VBox leftPaneText = new VBox(leftPane.getTextField(), leftPane);
-        VBox rightPaneText = new VBox(rightPane.getTextField(), rightPane);
-
-        VBox.setVgrow(leftPane, Priority.ALWAYS);
-        VBox.setVgrow(rightPane, Priority.ALWAYS);
-
-        HBox fileManagerHBox = new HBox(leftPaneText, rightPaneText);
-        HBox.setHgrow(leftPaneText, Priority.ALWAYS);
-        HBox.setHgrow(rightPaneText, Priority.ALWAYS);
-        VBox.setVgrow(fileManagerHBox, Priority.ALWAYS);
-
-        root.getChildren().addAll(getMenuBar(), fileManagerHBox, getToolBar());
+        root.getChildren().addAll(getMenuBar(), mFileView, getToolBar());
 
         Scene scene = new Scene(root, 700, 500);
 
         scene.addEventFilter(KeyEvent.KEY_RELEASED, e -> {
             if (SHORTCUT_DELETE.match(e)) {
-                ListView focusedPane = getFocusedPane();
-                if (focusedPane != null) {
-                    FileHelper.delete(focusedPane.getSelection());
-                }
+                mFileView.delete();
             } else if (SHORTCUT_NEW_FILE.match(e)) {
-                ListView focusedPane = getFocusedPane();
-                if (focusedPane != null) {
-                    FileHelper.createFile(focusedPane.getDirectory());
-                }
+                mFileView.createFile();
             } else if (SHORTCUT_NEW_DIRECTORY.match(e)) {
-                ListView focusedPane = getFocusedPane();
-                if (focusedPane != null) {
-                    FileHelper.createDirectory(focusedPane.getDirectory());
-                }
+                mFileView.createDirectory();
             } else if (SHORTCUT_RENAME.match(e)) {
-                ListView focusedPane = getFocusedPane();
-                if (focusedPane != null) {
-                    FileHelper.rename(focusedPane.getSelection());
-                }
+                mFileView.rename();
             } else if (SHORTCUT_COPY.match(e)) {
-                copy();
+                mFileView.copy();
             } else if (SHORTCUT_MOVE.match(e)) {
-                move();
+                mFileView.move();
             }
         });
 
@@ -99,33 +68,19 @@ public class Main extends Application {
 
         // Create file menu
         MenuItem newFile = new MenuItem("New File");
-        newFile.setOnAction(e -> {
-            ListView focusedPane = getFocusedPane();
-            if (focusedPane != null) {
-                FileHelper.createFile(focusedPane.getDirectory());
-            }
-        });
+        newFile.setOnAction(e -> mFileView.createFile());
         newFile.setAccelerator(SHORTCUT_NEW_FILE);
 
         MenuItem newFolder = new MenuItem("New Folder     ");
-        newFolder.setOnAction(e -> {
-            ListView focusedPane = getFocusedPane();
-            if (focusedPane != null) FileHelper.createDirectory(focusedPane.getDirectory());
-        });
+        newFolder.setOnAction(e -> mFileView.createDirectory());
         newFolder.setAccelerator(SHORTCUT_NEW_DIRECTORY);
 
         MenuItem renameItem = new MenuItem("Rename");
-        renameItem.setOnAction(e -> {
-            ListView focusedPane = getFocusedPane();
-            if (focusedPane != null) FileHelper.rename(focusedPane.getSelection());
-        });
+        renameItem.setOnAction(e -> mFileView.rename());
         renameItem.setAccelerator(SHORTCUT_RENAME);
 
         MenuItem deleteItem = new MenuItem("Delete");
-        deleteItem.setOnAction(e -> {
-            ListView focusedPane = getFocusedPane();
-            if (focusedPane != null) FileHelper.delete(focusedPane.getSelection());
-        });
+        deleteItem.setOnAction(e -> mFileView.delete());
         deleteItem.setAccelerator(SHORTCUT_DELETE);
 
         fileMenu.getItems().addAll(newFile, newFolder, renameItem, deleteItem);
@@ -143,45 +98,11 @@ public class Main extends Application {
 
     private ToolBar getToolBar() {
         Label labelCopy = new Label("F5 Copy");
-        labelCopy.setOnMouseClicked(e -> copy());
+        labelCopy.setOnMouseClicked(e -> mFileView.copy());
 
         Label labelMove = new Label("F6 Move");
-        labelMove.setOnMouseClicked(e -> move());
+        labelMove.setOnMouseClicked(e -> mFileView.move());
 
         return new ToolBar(labelCopy, new Separator(), labelMove);
-    }
-
-    private void copy() {
-        if (leftPane.isFocused()) {
-            Path source = leftPane.getSelection();
-            Path target = rightPane.getDirectory();
-            FileHelper.copy(source, target);
-        } else if (rightPane.isFocused()) {
-            Path source = rightPane.getSelection();
-            Path target = leftPane.getDirectory();
-            FileHelper.copy(source, target);
-        }
-    }
-
-    private void move() {
-        if (leftPane.isFocused()) {
-            Path source = leftPane.getSelection();
-            Path target = rightPane.getDirectory();
-            FileHelper.move(source, target);
-        } else if (rightPane.isFocused()) {
-            Path source = rightPane.getSelection();
-            Path target = leftPane.getDirectory();
-            FileHelper.move(source, target);
-        }
-    }
-
-    private ListView getFocusedPane() {
-        if (leftPane.isFocused()) {
-            return leftPane;
-        } else if (rightPane.isFocused()) {
-            return rightPane;
-        } else {
-            return null;
-        }
     }
 }
