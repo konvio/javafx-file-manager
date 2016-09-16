@@ -22,6 +22,7 @@ public class FileView extends HBox {
 
         VBox leftView = new VBox(mLeftPane.getTextField(), mLeftPane);
         VBox rightView = new VBox(mRightPane.getTextField(), mRightPane);
+        mLeftPane.setFocusTraversable(true);
 
         VBox.setVgrow(mLeftPane, Priority.ALWAYS);
         VBox.setVgrow(mRightPane, Priority.ALWAYS);

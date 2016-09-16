@@ -135,7 +135,11 @@ public class ListView extends javafx.scene.control.ListView<String> {
         File parent = mDirectory.getParentFile();
         if (parent != null) {
             mDirectory = parent;
-            refresh();
+            if (mDirectory.exists()) {
+                refresh();
+            } else {
+                back();
+            }
         }
     }
 }
