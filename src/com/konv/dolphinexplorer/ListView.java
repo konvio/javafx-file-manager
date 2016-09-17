@@ -2,12 +2,15 @@ package com.konv.dolphinexplorer;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
 
 import java.awt.*;
 import java.io.File;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ListView extends javafx.scene.control.ListView<String> {
 
@@ -19,6 +22,7 @@ public class ListView extends javafx.scene.control.ListView<String> {
 
     public ListView(String path) {
         super();
+        getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         mDirectory = new File(path);
 
         mChildrenList = FXCollections.observableArrayList();
@@ -54,13 +58,12 @@ public class ListView extends javafx.scene.control.ListView<String> {
         return mTextField;
     }
 
-    public Path getSelection() {
-        String name = getSelectionModel().getSelectedItem();
-        if (name != null) {
-            return mDirectory.toPath().resolve(name);
-        } else {
-            return null;
+    public List<Path> getSelection() {
+        List<Path> selection = new ArrayList<>();
+        for (String item : getSelectionModel().getSelectedItems()) {
+            selection.add(mDirectory.toPath().resolve(item));
         }
+        return selection;
     }
 
     public Path getDirectory() {
@@ -93,6 +96,7 @@ public class ListView extends javafx.scene.control.ListView<String> {
         if (list != null) {
             mChildrenList.clear();
             mChildrenList.addAll(list);
+            File file = new File("alkjfdlakjfdlkasljf");
         } else {
             mChildrenList.clear();
         }

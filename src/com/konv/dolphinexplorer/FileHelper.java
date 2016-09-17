@@ -8,43 +8,50 @@ import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 
 public class FileHelper {
 
-    public static void copy(Path source, Path target) {
-        try {
-            File sourceFile = source.toFile();
-            if (sourceFile.isDirectory()) {
-                FileUtils.copyDirectoryToDirectory(source.toFile(), target.toFile());
-            } else {
-                FileUtils.copyFileToDirectory(sourceFile, target.toFile());
-            }
-        } catch (IOException e) {
-            DialogHelper.showException(e);
-        }
-    }
-
-    public static void move(Path source, Path targetDirectory) {
-        try {
-            FileUtils.moveDirectory(source.toFile(), targetDirectory.toFile());
-        } catch (Exception e) {
-            DialogHelper.showException(e);
-        }
-    }
-
-    public static void delete(Path path) {
-        String title = "Delete";
-        boolean confirmed = DialogHelper.showConfirmationDialog(title, null,
-                "Do you really want to delete " + path.getFileName().toString() + "?");
-        if (confirmed) {
+    public static void copy(List<Path> source, Path target) {
+        for (Path path : source) {
             try {
-                if (path.toFile().isDirectory()) {
-                    FileUtils.deleteDirectory(path.toFile());
+                File sourceFile = path.toFile();
+                if (sourceFile.isDirectory()) {
+                    FileUtils.copyDirectoryToDirectory(sourceFile, target.toFile());
                 } else {
-                    FileUtils.forceDelete(path.toFile());
+                    FileUtils.copyFileToDirectory(sourceFile, target.toFile());
                 }
             } catch (IOException e) {
                 DialogHelper.showException(e);
+            }
+        }
+    }
+
+    public static void move(List<Path> source, Path targetDirectory) {
+        for (Path path : source) {
+            try {
+                FileUtils.moveToDirectory(path.toFile(), targetDirectory.toFile(), false);
+            } catch (Exception e) {
+                DialogHelper.showException(e);
+            }
+        }
+    }
+
+    public static void delete(List<Path> source) {
+        String title = "Delete";
+        for (Path path : source) {
+            boolean confirmed = DialogHelper.showConfirmationDialog(title, null,
+                    "Do you really want to delete " + path.getFileName().toString() + "?");
+            if (confirmed) {
+                try {
+                    if (path.toFile().isDirectory()) {
+                        FileUtils.deleteDirectory(path.toFile());
+                    } else {
+                        FileUtils.forceDelete(path.toFile());
+                    }
+                } catch (IOException e) {
+                    DialogHelper.showException(e);
+                }
             }
         }
     }

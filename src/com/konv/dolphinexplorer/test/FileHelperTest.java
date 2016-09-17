@@ -7,6 +7,9 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
 import static junit.framework.TestCase.fail;
 import static org.apache.commons.io.FileUtils.deleteDirectory;
@@ -14,7 +17,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.arrayContaining;
 import static org.hamcrest.Matchers.equalTo;
 
-public class FileOperationsTest {
+public class FileHelperTest {
     private File mDirectory;
     private File mSourceDirectory;
     private File mTargetDirectory;
@@ -31,10 +34,12 @@ public class FileOperationsTest {
 
     @Test
     public void singleFileCopyToOtherDirectory() {
-        File file = new File("D:/DolphinExplorerUnitTest/Source/testFile.txt");
         try {
+            File file = new File("D:/DolphinExplorerUnitTest/Source/testFile.txt");
             file.createNewFile();
-            FileHelper.copy(file.toPath(), mTargetDirectory.toPath());
+            List<Path> selection = new ArrayList<>();
+            selection.add(file.toPath());
+            FileHelper.copy(selection, mTargetDirectory.toPath());
             String[] targetFiles = mTargetDirectory.list();
             assertThat(targetFiles, arrayContaining("testFile.txt"));
             assertThat(file.exists(), equalTo(true));

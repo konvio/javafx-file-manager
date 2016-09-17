@@ -22,6 +22,7 @@ public class Main extends Application {
     private static final KeyCombination SHORTCUT_NEW_DIRECTORY = new KeyCodeCombination(KeyCode.N,
             KeyCombination.SHORTCUT_DOWN, KeyCombination.SHIFT_DOWN);
     private static final KeyCombination SHORTCUT_RENAME = new KeyCodeCombination(KeyCode.F6, KeyCombination.SHIFT_DOWN);
+    private static final KeyCombination SHORTCUT_FOCUS_TEXT_FIELD = new KeyCodeCombination(KeyCode.D, KeyCombination.SHIFT_DOWN);
 
     private FileView mFileView;
 
@@ -50,6 +51,8 @@ public class Main extends Application {
                 mFileView.copy();
             } else if (SHORTCUT_MOVE.match(e)) {
                 mFileView.move();
+            } else if (SHORTCUT_FOCUS_TEXT_FIELD.match(e)) {
+                mFileView.focusTextField();
             }
         });
 

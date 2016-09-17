@@ -6,6 +6,7 @@ import javafx.scene.layout.VBox;
 
 import java.io.File;
 import java.nio.file.Path;
+import java.util.List;
 
 public class FileView extends HBox {
 
@@ -34,11 +35,11 @@ public class FileView extends HBox {
 
     public void copy() {
         if (mLeftPane.isFocused()) {
-            Path source = mLeftPane.getSelection();
+            List<Path> source = mLeftPane.getSelection();
             Path target = mRightPane.getDirectory();
             FileHelper.copy(source, target);
         } else if (mRightPane.isFocused()) {
-            Path source = mRightPane.getSelection();
+            List<Path> source = mRightPane.getSelection();
             Path target = mLeftPane.getDirectory();
             FileHelper.copy(source, target);
         }
@@ -46,11 +47,11 @@ public class FileView extends HBox {
 
     public void move() {
         if (mLeftPane.isFocused()) {
-            Path source = mLeftPane.getSelection();
+            List<Path> source = mLeftPane.getSelection();
             Path target = mRightPane.getDirectory();
             FileHelper.move(source, target);
         } else if (mRightPane.isFocused()) {
-            Path source = mRightPane.getSelection();
+            List<Path> source = mRightPane.getSelection();
             Path target = mLeftPane.getDirectory();
             FileHelper.move(source, target);
         }
@@ -63,7 +64,10 @@ public class FileView extends HBox {
 
     public void rename() {
         ListView focusedPane = getFocusedPane();
-        if (focusedPane != null) FileHelper.rename(focusedPane.getSelection());
+        if (focusedPane != null) {
+            List<Path> selection = focusedPane.getSelection();
+            if (selection.size() == 1) FileHelper.rename(selection.get(0));
+        }
     }
 
     public void createDirectory() {
@@ -74,6 +78,11 @@ public class FileView extends HBox {
     public void createFile() {
         ListView focusedPane = getFocusedPane();
         if (focusedPane != null) FileHelper.createFile(focusedPane.getDirectory());
+    }
+
+    public void focusTextField() {
+        ListView focusedPane = getFocusedPane();
+        if (focusedPane != null) focusedPane.getTextField().requestFocus();
     }
 
     private ListView getFocusedPane() {
