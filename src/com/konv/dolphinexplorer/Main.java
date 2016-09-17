@@ -23,6 +23,7 @@ public class Main extends Application {
             KeyCombination.SHORTCUT_DOWN, KeyCombination.SHIFT_DOWN);
     private static final KeyCombination SHORTCUT_RENAME = new KeyCodeCombination(KeyCode.F6, KeyCombination.SHIFT_DOWN);
     private static final KeyCombination SHORTCUT_FOCUS_TEXT_FIELD = new KeyCodeCombination(KeyCode.D, KeyCombination.SHIFT_DOWN);
+    private static final KeyCombination SHORTCUT_HTML_EDITOR = new KeyCodeCombination(KeyCode.F3);
 
     private FileView mFileView;
 
@@ -53,6 +54,8 @@ public class Main extends Application {
                 mFileView.move();
             } else if (SHORTCUT_FOCUS_TEXT_FIELD.match(e)) {
                 mFileView.focusTextField();
+            } else if (SHORTCUT_HTML_EDITOR.match(e)) {
+                mFileView.openHtml();
             }
         });
 
@@ -100,12 +103,15 @@ public class Main extends Application {
     }
 
     private ToolBar getToolBar() {
+        Label labelOpenAsText = new Label("F3 HTML editor");
+        labelOpenAsText.setOnMouseClicked(e -> mFileView.openHtml());
+
         Label labelCopy = new Label("F5 Copy");
         labelCopy.setOnMouseClicked(e -> mFileView.copy());
 
         Label labelMove = new Label("F6 Move");
         labelMove.setOnMouseClicked(e -> mFileView.move());
 
-        return new ToolBar(labelCopy, new Separator(), labelMove);
+        return new ToolBar(labelOpenAsText, new Separator(), labelCopy, new Separator(), labelMove);
     }
 }

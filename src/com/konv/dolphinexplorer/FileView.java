@@ -1,11 +1,17 @@
 package com.konv.dolphinexplorer;
 
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import javafx.scene.web.HTMLEditor;
+import javafx.stage.Stage;
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.List;
 
@@ -20,6 +26,8 @@ public class FileView extends HBox {
     private ListView mLeftPane;
     private ListView mRightPane;
 
+    private TextEditor mTextEditor;
+
     public FileView() {
         File[] roots = File.listRoots();
         String leftPanePath = roots[0].getPath();
@@ -27,6 +35,7 @@ public class FileView extends HBox {
 
         mLeftPane = new ListView(leftPanePath);
         mRightPane = new ListView(rightPanePath);
+        mTextEditor = new TextEditor();
 
         mLeftPane.getTextField().setOnAction(e -> onTextEntered(mLeftPane.getTextField()));
         mRightPane.getTextField().setOnAction(e -> onTextEntered(mRightPane.getTextField()));
@@ -95,6 +104,15 @@ public class FileView extends HBox {
         if (focusedPane != null) focusedPane.getTextField().requestFocus();
     }
 
+    public void openHtml() {
+        ListView focusedPane = getFocusedPane();
+        if (focusedPane == null) return;
+        List<Path> selection = focusedPane.getSelection();
+        if (selection.size() != 1) return;
+        File file = selection.get(0).toFile();
+        mTextEditor.open(file);
+    }
+
     private ListView getFocusedPane() {
         if (mLeftPane.isFocused() || mLeftPane.getTextField().isFocused()) {
             return mLeftPane;
@@ -103,11 +121,6 @@ public class FileView extends HBox {
         } else {
             return null;
         }
-    }
-
-    private ListView getOtherPane(ListView pane) {
-        if (pane == mLeftPane) return mRightPane;
-        return mLeftPane;
     }
 
     private ListView getFocusedPane(TextField textField) {
