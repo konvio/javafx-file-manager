@@ -1,5 +1,6 @@
 package com.konv.dolphinexplorer;
 
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
@@ -9,6 +10,12 @@ import java.nio.file.Path;
 import java.util.List;
 
 public class FileView extends HBox {
+
+    private static final String ACTION_SELECT = "select";
+    private static final String ACTION_COPY = "copy";
+    private static final String ACTION_MOVE = "move";
+    private static final String ACTION_DELETE = "delete";
+    private static final String ACTION_OPEN = "open";
 
     private ListView mLeftPane;
     private ListView mRightPane;
@@ -20,6 +27,9 @@ public class FileView extends HBox {
 
         mLeftPane = new ListView(leftPanePath);
         mRightPane = new ListView(rightPanePath);
+
+        mLeftPane.getTextField().setOnAction(e -> onTextEntered(mLeftPane.getTextField()));
+        mRightPane.getTextField().setOnAction(e -> onTextEntered(mRightPane.getTextField()));
 
         VBox leftView = new VBox(mLeftPane.getTextField(), mLeftPane);
         VBox rightView = new VBox(mRightPane.getTextField(), mRightPane);
@@ -86,12 +96,51 @@ public class FileView extends HBox {
     }
 
     private ListView getFocusedPane() {
-        if (mLeftPane.isFocused()) {
+        if (mLeftPane.isFocused() || mLeftPane.getTextField().isFocused()) {
             return mLeftPane;
-        } else if (mRightPane.isFocused()) {
+        } else if (mRightPane.isFocused() || mRightPane.getTextField().isFocused()) {
             return mRightPane;
         } else {
             return null;
         }
+    }
+
+    private ListView getOtherPane(ListView pane) {
+        if (pane == mLeftPane) return mRightPane;
+        return mLeftPane;
+    }
+
+    private ListView getFocusedPane(TextField textField) {
+        if (textField == mLeftPane.getTextField()) {
+            return mLeftPane;
+        } else {
+            return mRightPane;
+        }
+    }
+
+    private void onTextEntered(TextField textField) {
+        ListView focusedPane = getFocusedPane(textField);
+        String command = textField.getText().trim();
+        File file = new File(command);
+        if (file.exists()) {
+            focusedPane.openFile(file);
+        } else if (command.startsWith(ACTION_SELECT)) {
+            String regex = command.substring(ACTION_SELECT.length()).trim();
+            focusedPane.select(regex);
+        } else if (command.startsWith(ACTION_COPY)) {
+            String regex = command.substring(ACTION_COPY.length()).trim();
+            focusedPane.select(regex);
+            copy();
+        } else if (command.startsWith(ACTION_MOVE)) {
+            String regex = command.substring(ACTION_MOVE.length()).trim();
+            focusedPane.select(regex);
+            move();
+        } else if (command.startsWith(ACTION_DELETE)) {
+            String regex = command.substring(ACTION_DELETE.length()).trim();
+            focusedPane.select(regex);
+            delete();
+        }
+        textField.setText(focusedPane.getDirectory().toString());
+        focusedPane.requestFocus();
     }
 }

@@ -30,14 +30,11 @@ public class ListView extends javafx.scene.control.ListView<String> {
 
         mTextField = new TextField();
         mTextField.setStyle("-fx-font-size: 10px;");
-        mTextField.setOnAction(e -> goToFile(mTextField.getText()));
 
         setOnKeyPressed(key -> {
             switch (key.getCode()) {
                 case ENTER:
-                    if (isFocused()) {
-                        navigate(getSelectionModel().getSelectedItem());
-                    }
+                    if (isFocused()) navigate(getSelectionModel().getSelectedItem());
                     break;
                 case BACK_SPACE:
                     back();
@@ -68,6 +65,17 @@ public class ListView extends javafx.scene.control.ListView<String> {
 
     public Path getDirectory() {
         return mDirectory.toPath();
+    }
+
+    public void select(String regex) {
+        if (regex.startsWith("*")) regex = "." + regex;
+        getSelectionModel().clearSelection();
+        for (int i = 0; i < mChildrenList.size(); ++i) {
+            String item = mChildrenList.get(i);
+            if (item.matches(regex) || StringHelper.containsWord(item, regex)) {
+                getSelectionModel().select(i);
+            }
+        }
     }
 
     private String[] getCurrentFilesList() {
@@ -102,8 +110,7 @@ public class ListView extends javafx.scene.control.ListView<String> {
         }
     }
 
-    private void goToFile(String path) {
-        File file = new File(path);
+    public void openFile(File file) {
         if (!file.exists()) {
             refresh();
             return;
