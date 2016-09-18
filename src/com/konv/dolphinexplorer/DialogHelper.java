@@ -3,6 +3,7 @@ package com.konv.dolphinexplorer;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
 import javafx.stage.StageStyle;
 import org.jetbrains.annotations.Nullable;
 
@@ -23,12 +24,52 @@ public class DialogHelper {
         alert.showAndWait();
     }
 
+    public static void showExpandableAlert(AlertType alertType, String title, String header, String content,
+                                           String expandableContent) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+
+        TextArea textArea = new TextArea(expandableContent);
+        textArea.setEditable(false);
+        textArea.setWrapText(true);
+        textArea.setMaxWidth(Double.MAX_VALUE);
+        textArea.setMaxHeight(Double.MAX_VALUE);
+
+        VBox.setVgrow(textArea, Priority.ALWAYS);
+        alert.getDialogPane().setExpandableContent(new VBox(textArea));
+
+        alert.showAndWait();
+    }
+
     public static boolean showConfirmationDialog(String title, String header, String content) {
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.initStyle(StageStyle.UTILITY);
         alert.setTitle(title);
         alert.setHeaderText(header);
         alert.setContentText(content);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        return result.get() == ButtonType.OK;
+    }
+
+    public static boolean showExpandableConfirmationDialog(String title, String header, String content,
+                                                           String expandableContent) {
+        Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.initStyle(StageStyle.UTILITY);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+
+        TextArea textArea = new TextArea(expandableContent);
+        textArea.setEditable(false);
+        textArea.setWrapText(true);
+        textArea.setMaxWidth(Double.MAX_VALUE);
+        textArea.setMaxHeight(Double.MAX_VALUE);
+
+        VBox.setVgrow(textArea, Priority.ALWAYS);
+        alert.getDialogPane().setExpandableContent(new VBox(textArea));
 
         Optional<ButtonType> result = alert.showAndWait();
         return result.get() == ButtonType.OK;
@@ -47,35 +88,11 @@ public class DialogHelper {
     }
 
     public static void showException(Exception e) {
-        Alert alert = new Alert(AlertType.ERROR);
-        alert.initStyle(StageStyle.UTILITY);
-        alert.setTitle("Error");
-        alert.setHeaderText("Something went wrong");
-        alert.setContentText(e.toString());
-
         StringWriter stringWriter = new StringWriter();
         PrintWriter printWriter = new PrintWriter(stringWriter);
         e.printStackTrace(printWriter);
         String exceptionText = printWriter.toString();
 
-        Label label = new Label("Exception stacktrace:");
-
-        TextArea textArea = new TextArea(exceptionText);
-        textArea.setEditable(false);
-        textArea.setWrapText(true);
-
-        textArea.setMaxWidth(Double.MAX_VALUE);
-        textArea.setMaxHeight(Double.MAX_VALUE);
-        GridPane.setVgrow(textArea, Priority.ALWAYS);
-        GridPane.setHgrow(textArea, Priority.ALWAYS);
-
-        GridPane expandableContent = new GridPane();
-        expandableContent.setMaxWidth(Double.MAX_VALUE);
-        expandableContent.add(label, 0, 0);
-        expandableContent.add(textArea, 0, 1);
-
-        alert.getDialogPane().setExpandableContent(expandableContent);
-
-        alert.showAndWait();
+        showExpandableAlert(AlertType.ERROR, "Dolphin Explorer", "Something went wrong", e.toString(), exceptionText);
     }
 }

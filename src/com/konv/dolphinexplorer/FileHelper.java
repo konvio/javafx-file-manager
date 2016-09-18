@@ -39,6 +39,7 @@ public class FileHelper {
 
     public static void delete(List<Path> source) {
         String title = "Delete";
+        DialogHelper.showExpandableAlert(Alert.AlertType.INFORMATION, "Title", "Header", "Content", "ExpandableContent");
         for (Path path : source) {
             boolean confirmed = DialogHelper.showConfirmationDialog(title, null,
                     "Do you really want to delete " + path.getFileName().toString() + "?");
