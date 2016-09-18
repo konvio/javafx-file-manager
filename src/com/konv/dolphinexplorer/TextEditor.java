@@ -40,15 +40,17 @@ public class TextEditor extends HTMLEditor {
     }
 
     public void open(File file) {
-        try {
-            String content = FileUtils.readFileToString(file, StandardCharsets.UTF_8);
-            mFile = file;
-            setHtmlText(content);
-            mStage.setTitle(file.getPath());
-            mStage.show();
-        } catch (IOException e) {
-            mFile = null;
-            mStage.close();
+        if (file.toString().endsWith(".html")) {
+            try {
+                String content = FileUtils.readFileToString(file, StandardCharsets.UTF_8);
+                mFile = file;
+                setHtmlText(content);
+                mStage.setTitle(file.getPath());
+                mStage.show();
+            } catch (IOException e) {
+                mFile = null;
+                mStage.close();
+            }
         }
     }
 

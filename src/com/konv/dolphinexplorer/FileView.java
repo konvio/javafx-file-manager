@@ -1,19 +1,27 @@
 package com.konv.dolphinexplorer;
 
-import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import javafx.scene.web.HTMLEditor;
-import javafx.stage.Stage;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.jetbrains.annotations.Nullable;
 
+import java.awt.*;
+import java.beans.EventHandler;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.*;
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FileView extends HBox {
 
@@ -113,6 +121,22 @@ public class FileView extends HBox {
         mTextEditor.open(file);
     }
 
+    public void countWords() {
+        Path path = getSelectedPath();
+        if (path != null && path.toString().endsWith(".txt")) {
+            Path resultPath = path.getParent().resolve("[Word Count] " + path.getFileName());
+            try (PrintWriter printWriter = new PrintWriter(resultPath.toFile())) {
+                Arrays.stream(new String(Files.readAllBytes(path), StandardCharsets.UTF_8).toLowerCase().split("\\W+"))
+                        .collect(Collectors.groupingBy(Function.identity(), TreeMap::new, Collectors.counting()))
+                        .entrySet().stream().sorted(Map.Entry.<String, Long>comparingByValue().reversed())
+                        .forEach(printWriter::println);
+                Desktop.getDesktop().open(resultPath.toFile());
+            } catch (IOException e) {
+                DialogHelper.showException(e);
+            }
+        }
+    }
+
     private ListView getFocusedPane() {
         if (mLeftPane.isFocused() || mLeftPane.getTextField().isFocused()) {
             return mLeftPane;
@@ -129,6 +153,15 @@ public class FileView extends HBox {
         } else {
             return mRightPane;
         }
+    }
+
+    @Nullable
+    private Path getSelectedPath() {
+        ListView focusedPane = getFocusedPane();
+        if (focusedPane == null) return null;
+        List<Path> selection = focusedPane.getSelection();
+        if (selection.size() != 1) return null;
+        return selection.get(0);
     }
 
     private void onTextEntered(TextField textField) {

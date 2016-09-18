@@ -103,8 +103,11 @@ public class Main extends Application {
     }
 
     private ToolBar getToolBar() {
-        Label labelOpenAsText = new Label("F3 HTML editor");
+        Label labelOpenAsText = new Label("F3 Edit HTML");
         labelOpenAsText.setOnMouseClicked(e -> mFileView.openHtml());
+
+        Label labelCountWords = new Label("Count words");
+        labelCountWords.setOnMouseClicked(e -> mFileView.countWords());
 
         Label labelCopy = new Label("F5 Copy");
         labelCopy.setOnMouseClicked(e -> mFileView.copy());
@@ -112,6 +115,6 @@ public class Main extends Application {
         Label labelMove = new Label("F6 Move");
         labelMove.setOnMouseClicked(e -> mFileView.move());
 
-        return new ToolBar(labelOpenAsText, new Separator(), labelCopy, new Separator(), labelMove);
+        return new ToolBar(labelCountWords, new Separator(),labelOpenAsText, new Separator(), labelCopy, new Separator(), labelMove);
     }
 }
