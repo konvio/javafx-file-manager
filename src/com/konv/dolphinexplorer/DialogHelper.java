@@ -8,7 +8,6 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.PrintWriter;
@@ -46,6 +45,7 @@ public class DialogHelper {
 
         VBox.setVgrow(textArea, Priority.ALWAYS);
         alert.getDialogPane().setExpandableContent(new VBox(textArea));
+        alert.getDialogPane().setExpanded(true);
 
         Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
         stage.getIcons().add(new Image(Main.class.getResourceAsStream("dolphin.png")));
@@ -81,6 +81,7 @@ public class DialogHelper {
 
         VBox.setVgrow(textArea, Priority.ALWAYS);
         alert.getDialogPane().setExpandableContent(new VBox(textArea));
+        alert.getDialogPane().setExpanded(true);
 
         Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
         stage.getIcons().add(new Image(Main.class.getResourceAsStream("dolphin.png")));
