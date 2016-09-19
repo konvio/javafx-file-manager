@@ -1,27 +1,24 @@
 package com.konv.dolphinexplorer;
 
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
 import org.jetbrains.annotations.Nullable;
 
 import java.awt.*;
-import java.beans.EventHandler;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class FileView extends HBox {
 
@@ -170,23 +167,38 @@ public class FileView extends HBox {
         File file = new File(command);
         if (file.exists()) {
             focusedPane.openFile(file);
+            focusedPane.requestFocus();
         } else if (command.startsWith(ACTION_SELECT)) {
             String regex = command.substring(ACTION_SELECT.length()).trim();
             focusedPane.select(regex);
+            focusedPane.requestFocus();
         } else if (command.startsWith(ACTION_COPY)) {
             String regex = command.substring(ACTION_COPY.length()).trim();
             focusedPane.select(regex);
+            focusedPane.requestFocus();
             copy();
         } else if (command.startsWith(ACTION_MOVE)) {
             String regex = command.substring(ACTION_MOVE.length()).trim();
             focusedPane.select(regex);
+            focusedPane.requestFocus();
             move();
         } else if (command.startsWith(ACTION_DELETE)) {
             String regex = command.substring(ACTION_DELETE.length()).trim();
             focusedPane.select(regex);
+            focusedPane.requestFocus();
             delete();
+        } else if (command.startsWith(ACTION_OPEN)) {
+            String regex = command.substring(ACTION_OPEN.length()).trim();
+            focusedPane.select(regex);
+            focusedPane.requestFocus();
+            for (Path path : focusedPane.getSelection()) {
+                try {
+                    Desktop.getDesktop().open(path.toFile());
+                } catch (Exception e) {
+                    DialogHelper.showException(e);
+                }
+            }
         }
         textField.setText(focusedPane.getDirectory().toString());
-        focusedPane.requestFocus();
     }
 }

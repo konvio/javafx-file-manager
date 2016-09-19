@@ -2,8 +2,10 @@ package com.konv.dolphinexplorer;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
+import javafx.util.Callback;
 
 import java.awt.*;
 import java.io.File;
@@ -39,6 +41,12 @@ public class ListView extends javafx.scene.control.ListView<String> {
                 case BACK_SPACE:
                     back();
                     break;
+            }
+        });
+        setCellFactory(new Callback<javafx.scene.control.ListView<String>, ListCell<String>>() {
+            @Override
+            public ListCell<String> call(javafx.scene.control.ListView<String> list) {
+                return new SystemIconsHelper.AttachmentListCell(ListView.this);
             }
         });
         mWatchServiceHelper = new WatchServiceHelper(this);
