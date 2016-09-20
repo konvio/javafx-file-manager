@@ -37,7 +37,7 @@ public class Main extends Application {
 
         root.getChildren().addAll(getMenuBar(), mFileView, getToolBar());
 
-        Scene scene = new Scene(root, 700, 500);
+        Scene scene = new Scene(root, 840, 600);
 
         scene.addEventFilter(KeyEvent.KEY_RELEASED, e -> {
             if (SHORTCUT_DELETE.match(e)) {
