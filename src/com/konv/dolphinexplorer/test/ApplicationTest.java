@@ -1,6 +1,7 @@
 package com.konv.dolphinexplorer.test;
 
 import com.konv.dolphinexplorer.FileHelper;
+import com.konv.dolphinexplorer.StringHelper;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +18,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.arrayContaining;
 import static org.hamcrest.Matchers.equalTo;
 
-public class FileHelperTest {
+public class ApplicationTest {
     private File mDirectory;
     private File mSourceDirectory;
     private File mTargetDirectory;
@@ -46,6 +47,32 @@ public class FileHelperTest {
         } catch (Exception e) {
             fail();
         }
+    }
+
+    @Test
+    public void nonEmptyDirectoryDeletion() {
+        try {
+            File file = new File("D:/DolphinExplorerUnitTest/Source/testFile.txt");
+            file.createNewFile();
+            deleteDirectory(mSourceDirectory);
+            assertThat(mSourceDirectory.exists(), equalTo(false));
+        } catch (IOException e) {
+            fail();
+        }
+    }
+
+    @Test
+    public void splitWordsTest() {
+        String text = "Split,, me properly.Please,";
+        String[] words = StringHelper.getWords(text);
+        assertThat(words, arrayContaining("split", "me", "properly", "please"));
+    }
+
+    @Test
+    public void containsWordTest() {
+        String text = "fjaljflj ,jl aflj !!find,,,djfald; ";
+        String word = "find";
+        assertThat(StringHelper.containsWord(text, word), equalTo(true));
     }
 
     @After
