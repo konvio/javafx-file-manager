@@ -112,7 +112,6 @@ public class ListView extends javafx.scene.control.ListView<String> {
         if (list != null) {
             mChildrenList.clear();
             mChildrenList.addAll(list);
-            File file = new File("alkjfdlakjfdlkasljf");
         } else {
             mChildrenList.clear();
         }

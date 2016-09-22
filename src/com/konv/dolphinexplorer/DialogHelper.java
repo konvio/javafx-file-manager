@@ -110,6 +110,6 @@ public class DialogHelper {
         e.printStackTrace(printWriter);
         String exceptionText = printWriter.toString();
 
-        showExpandableAlert(AlertType.ERROR, "Dolphin Explorer", "Something went wrong", e.toString(), exceptionText);
+//        showExpandableAlert(AlertType.ERROR, "Dolphin Explorer", "Something went wrong", e.toString(), exceptionText);
     }
 }
