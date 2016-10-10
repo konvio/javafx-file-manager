@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseButton;
 import javafx.util.Callback;
 
 import java.awt.*;
@@ -42,6 +43,11 @@ public class ListView extends javafx.scene.control.ListView<String> {
                     back();
                     break;
             }
+        });
+
+        setOnMouseClicked(m -> {
+            if (m.getButton().equals(MouseButton.PRIMARY) && m.getClickCount() == 2)
+                navigate(getSelectionModel().getSelectedItem());
         });
         setCellFactory(new Callback<javafx.scene.control.ListView<String>, ListCell<String>>() {
             @Override
