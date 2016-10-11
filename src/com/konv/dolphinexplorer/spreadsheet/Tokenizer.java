@@ -31,7 +31,9 @@ public class Tokenizer {
                 tokens.add(new Token(TokenType.BRACEOPEN, matcher.group(TokenType.BRACEOPEN.name())));
             } else if (matcher.group(TokenType.BRACECLOSE.name()) != null) {
                 tokens.add(new Token(TokenType.BRACECLOSE, matcher.group(TokenType.BRACECLOSE.name())));
-            };
+            } else if (matcher.group(TokenType.INVALID.name()) != null) {
+                return null;
+            }
         }
         return tokens;
     }
@@ -63,7 +65,7 @@ public class Tokenizer {
 
     public static enum TokenType {
         NUMBER("-?\\d+"), BINARYOP("[+|\\-|\\*|\\/]"), REFERENCE("[A-Za-z][1-9]\\d?"),
-        WHITESPACE("\\s"), BRACEOPEN("\\("), BRACECLOSE("\\)");
+        WHITESPACE("\\s"), BRACEOPEN("\\("), BRACECLOSE("\\)"), INVALID(".");
 
         public final String pattern;
 

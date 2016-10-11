@@ -7,15 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_controlsfx_controlsfx_8_40_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/TokenizerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DolphinExplorer/com/konv/dolphinexplorer/Main.class" afterPath="$PROJECT_DIR$/out/production/DolphinExplorer/com/konv/dolphinexplorer/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DolphinExplorer.iml" afterPath="$PROJECT_DIR$/DolphinExplorer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/Main.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Tokenizer.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Tokenizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/TokenizerTest.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/TokenizerTest.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,8 +72,8 @@
       <file leaf-file-name="TokenizerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/TokenizerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+            <state relative-caret-position="221">
+              <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,8 +145,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="x" value="54" />
+    <option name="y" value="-8" />
+    <option name="width" value="1320" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -628,47 +624,47 @@
       <workItem from="1476159339858" duration="617000" />
       <workItem from="1476164783958" duration="4685000" />
       <workItem from="1476176061361" duration="1149000" />
-      <workItem from="1476182257463" duration="4408000" />
+      <workItem from="1476182257463" duration="5184000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 44m 03s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 45m 15s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 46m 15s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 48m 47s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 49m 18s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 49m 32s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 50m 05s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 50m 32s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TokenizerTest - 2016.10.11 at 14h 50m 44s.xml">
       <configuration name="TokenizerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TokenizerTest - 2016.10.11 at 14h 51m 00s.xml">
       <configuration name="TokenizerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TokenizerTest - 2016.10.11 at 14h 57m 17s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.10.11 at 14h 57m 54s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.10.11 at 14h 58m 07s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.10.11 at 14h 58m 16s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.10.11 at 14h 58m 34s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.10.11 at 14h 59m 07s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.10.11 at 15h 02m 49s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.10.11 at 15h 03m 18s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40478000" />
+    <option name="totallyTimeSpent" value="41254000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -677,10 +673,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.234375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24930748" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3462604" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17642753" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18481596" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494244" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1116,29 +1112,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Tokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="517">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
-            <marker date="1476186600099" expanded="true" signature="54:161" ph="..." />
-            <marker date="1476186600099" expanded="true" signature="249:577" ph="{...}" />
-            <marker date="1476186600099" expanded="true" signature="625:1711" ph="{...}" />
-            <marker date="1476186600099" expanded="true" signature="1743:2368" ph="{...}" />
-            <marker date="1476186600099" expanded="true" signature="1867:1938" ph="{...}" />
-            <marker date="1476186600099" expanded="false" signature="1990:2005" ph=" { " />
-            <marker date="1476186600099" expanded="false" signature="2056:2066" ph=" }" />
-            <marker date="1476186600099" expanded="true" signature="2128:2362" ph="{...}" />
-            <marker date="1476186600099" expanded="true" signature="2403:2682" ph="{...}" />
-            <marker date="1476186600099" expanded="false" signature="2628:2643" ph=" { " />
-            <marker date="1476186600099" expanded="false" signature="2666:2676" ph=" }" />
-            <marker date="1476186600099" expanded="true" signature="2727:2882" ph="{...}" />
+            <marker date="1476187031934" expanded="true" signature="54:161" ph="..." />
+            <marker date="1476187031934" expanded="true" signature="249:577" ph="{...}" />
+            <marker date="1476187031934" expanded="true" signature="625:1813" ph="{...}" />
+            <marker date="1476187031934" expanded="true" signature="1845:2470" ph="{...}" />
+            <marker date="1476187031934" expanded="true" signature="1969:2040" ph="{...}" />
+            <marker date="1476187031934" expanded="false" signature="2092:2107" ph=" { " />
+            <marker date="1476187031934" expanded="false" signature="2158:2168" ph=" }" />
+            <marker date="1476187031934" expanded="true" signature="2230:2464" ph="{...}" />
+            <marker date="1476187031934" expanded="true" signature="2505:2798" ph="{...}" />
+            <marker date="1476187031934" expanded="false" signature="2744:2759" ph=" { " />
+            <marker date="1476187031934" expanded="false" signature="2782:2792" ph=" }" />
+            <marker date="1476187031934" expanded="true" signature="2843:2998" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/TokenizerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+        <state relative-caret-position="221">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -9,6 +9,7 @@ import static com.konv.dolphinexplorer.spreadsheet.Tokenizer.Token;
 import static com.konv.dolphinexplorer.spreadsheet.Tokenizer.TokenType.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.nullValue;
 
 public class TokenizerTest {
 
@@ -49,5 +50,12 @@ public class TokenizerTest {
         String input = "A2 + h56";
         List<Token> response = mTokenizer.tokenize(input);
         assertThat(response, contains(new Token(REFERENCE, "A2"), new Token(BINARYOP, "+"), new Token(REFERENCE, "H56")));
+    }
+
+    @Test
+    public void invalidInput() {
+        String input = "hh43";
+        List<Token> response = mTokenizer.tokenize(input);
+        assertThat(response, nullValue());
     }
 }
