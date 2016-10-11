@@ -3,12 +3,14 @@ package com.konv.dolphinexplorer.spreadsheet;
 import com.konv.dolphinexplorer.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToolBar;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -19,6 +21,7 @@ public class TableStage extends Stage {
     private SpreadsheetView mSpreadsheet;
     private SpreadsheetController mSpreadsheetController;
     private GridBase mGridBase;
+    private TextField mTextField;
     private int mRowCount = 99;
     private int mColumnCount = 26;
 
@@ -28,14 +31,19 @@ public class TableStage extends Stage {
 
     private void initUi() {
         VBox root = new VBox();
-        TextField textField = new TextField();
+        mTextField = new TextField();
+        mTextField.setOnAction(e -> {
+            int focusedRow = mSpreadsheet.getSelectionModel().getFocusedCell().getRow();
+            int focusedColumn = mSpreadsheet.getSelectionModel().getFocusedCell().getColumn();
+            mSpreadsheet.getGrid().setCellValue(focusedRow, focusedColumn, mTextField.getText());
+        });
 
         initSpreadsheet();
         VBox.setVgrow(mSpreadsheet, Priority.ALWAYS);
 
         ToolBar toolBar = new ToolBar();
         toolBar.getItems().add(new Label("Label"));
-        root.getChildren().addAll(toolBar, mSpreadsheet);
+        root.getChildren().addAll(mTextField, mSpreadsheet, toolBar);
         setScene(new Scene(root, 840, 600));
         getIcons().add(new Image(Main.class.getResourceAsStream("dolphin.png")));
     }
@@ -54,6 +62,16 @@ public class TableStage extends Stage {
         mGridBase.setRows(rows);
         mGridBase.addEventHandler(GridChange.GRID_CHANGE_EVENT, mSpreadsheetController);
         mSpreadsheet = new SpreadsheetView(mGridBase);
+        mSpreadsheet.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        mSpreadsheet.addEventFilter(KeyEvent.KEY_RELEASED, e -> updateTextField());
+        mSpreadsheet.addEventFilter(MouseEvent.MOUSE_CLICKED, e -> updateTextField());
         for (SpreadsheetColumn c : mSpreadsheet.getColumns()) c.setPrefWidth(90);
     }
+
+    private void updateTextField() {
+        int focusedRow = mSpreadsheet.getSelectionModel().getFocusedCell().getRow();
+        int focusedColumn = mSpreadsheet.getSelectionModel().getFocusedCell().getColumn();
+        mTextField.setText(mSpreadsheetController.getExpression(focusedRow, focusedColumn));
+    }
 }
+

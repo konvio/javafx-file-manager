@@ -63,7 +63,7 @@ public class Tokenizer {
         }
     }
 
-    public static enum TokenType {
+    public enum TokenType {
         NUMBER("-?\\d+"), BINARYOP("[+|\\-|\\*|\\/]"), REFERENCE("[A-Za-z][1-9]\\d?"),
         WHITESPACE("\\s"), BRACEOPEN("\\("), BRACECLOSE("\\)"), INVALID(".");
 
