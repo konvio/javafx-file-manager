@@ -1,5 +1,6 @@
 package com.konv.dolphinexplorer;
 
+import com.konv.dolphinexplorer.spreadsheet.TableStage;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -103,6 +104,8 @@ public class Main extends Application {
     }
 
     private ToolBar getToolBar() {
+        Label labelSpreadSheet = new Label("TableStage");
+        labelSpreadSheet.setOnMouseClicked(e -> new TableStage().show());
         Label labelOpenAsText = new Label("F3 Edit HTML");
         labelOpenAsText.setOnMouseClicked(e -> mFileView.openHtml());
 
@@ -115,6 +118,7 @@ public class Main extends Application {
         Label labelMove = new Label("F6 Move");
         labelMove.setOnMouseClicked(e -> mFileView.move());
 
-        return new ToolBar(labelCountWords, new Separator(),labelOpenAsText, new Separator(), labelCopy, new Separator(), labelMove);
+        return new ToolBar(labelSpreadSheet, new Separator(),
+                labelCountWords, new Separator(), labelOpenAsText, new Separator(), labelCopy, new Separator(), labelMove);
     }
 }

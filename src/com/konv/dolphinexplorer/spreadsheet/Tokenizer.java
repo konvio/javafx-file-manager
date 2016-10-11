@@ -10,16 +10,16 @@ public class Tokenizer {
     private Pattern mTokenPatterns;
 
     public Tokenizer() {
-        StringBuffer tokenPatternsBuffer = new StringBuffer();
+        StringBuilder tokenPatternsBuilder = new StringBuilder();
         for (TokenType tokenType : TokenType.values()) {
-            tokenPatternsBuffer.append(String.format("|(?<%s>%s)", tokenType.name(), tokenType.pattern));
-            mTokenPatterns = Pattern.compile(tokenPatternsBuffer.substring(1));
+            tokenPatternsBuilder.append(String.format("|(?<%s>%s)", tokenType.name(), tokenType.pattern));
+            mTokenPatterns = Pattern.compile(tokenPatternsBuilder.substring(1));
         }
     }
 
     public List<Token> tokenize(String input) {
         List<Token> tokens = new ArrayList<>();
-        Matcher matcher = mTokenPatterns.matcher(input);
+        Matcher matcher = mTokenPatterns.matcher(input.toUpperCase());
         while (matcher.find()) {
             if (matcher.group(TokenType.NUMBER.name()) != null) {
                 tokens.add(new Token(TokenType.NUMBER, matcher.group(TokenType.NUMBER.name())));
@@ -27,12 +27,16 @@ public class Tokenizer {
                 tokens.add(new Token(TokenType.BINARYOP, matcher.group(TokenType.BINARYOP.name())));
             } else if (matcher.group(TokenType.REFERENCE.name()) != null) {
                 tokens.add(new Token(TokenType.REFERENCE, matcher.group(TokenType.REFERENCE.name())));
-            }
+            } else if (matcher.group(TokenType.BRACEOPEN.name()) != null) {
+                tokens.add(new Token(TokenType.BRACEOPEN, matcher.group(TokenType.BRACEOPEN.name())));
+            } else if (matcher.group(TokenType.BRACECLOSE.name()) != null) {
+                tokens.add(new Token(TokenType.BRACECLOSE, matcher.group(TokenType.BRACECLOSE.name())));
+            };
         }
         return tokens;
     }
 
-    public class Token {
+    public static class Token {
         public final TokenType type;
         public final String data;
 
@@ -45,11 +49,21 @@ public class Tokenizer {
         public String toString() {
             return String.format("(%s %s)", type.name(), data);
         }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj instanceof Token) {
+                Token other = (Token) obj;
+                return type.equals(other.type) && data.equals(other.data);
+            } else {
+                return false;
+            }
+        }
     }
 
-    public enum TokenType {
-        NUMBER("-?\\d+"), BINARYOP("[+|\\-|\\*|\\/]"), REFERENCE("[A-Za-z][1-9]\\d*"),
-        WHITESPACE("\\s");
+    public static enum TokenType {
+        NUMBER("-?\\d+"), BINARYOP("[+|\\-|\\*|\\/]"), REFERENCE("[A-Za-z][1-9]\\d?"),
+        WHITESPACE("\\s"), BRACEOPEN("\\("), BRACECLOSE("\\)");
 
         public final String pattern;
 
@@ -60,7 +74,7 @@ public class Tokenizer {
 
     public static void main(String[] args) {
         Tokenizer tokenizer = new Tokenizer();
-        String input = "3 + 2 - 1 + 4 / 7";
+        String input = "3 + 2 - 1 + (4 / 7)";
         System.out.println(tokenizer.tokenize(input));
     }
 }
