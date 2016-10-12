@@ -71,7 +71,7 @@ public class TableStage extends Stage {
     private void updateTextField() {
         int focusedRow = mSpreadsheet.getSelectionModel().getFocusedCell().getRow();
         int focusedColumn = mSpreadsheet.getSelectionModel().getFocusedCell().getColumn();
-        mTextField.setText(mSpreadsheetController.getExpression(focusedRow, focusedColumn));
+        mTextField.setText(mSpreadsheetController.getTextRepresentation(focusedRow, focusedColumn));
     }
 }
 

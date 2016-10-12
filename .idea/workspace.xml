@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_jgrapht_jgrapht_core_1_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DolphinExplorer.iml" afterPath="$PROJECT_DIR$/DolphinExplorer.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Tokenizer.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Tokenizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,11 +68,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SpreadsheetController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java">
+      <file leaf-file-name="TableStage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="568">
+              <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,9 +125,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/TokenizerTest.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SyntaxAnalyzer.java" />
-        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Tokenizer.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java" />
       </list>
     </option>
   </component>
@@ -202,6 +199,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="DolphinExplorer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JUnit4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DolphinExplorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -632,7 +647,7 @@
       <workItem from="1476244228177" duration="612000" />
       <workItem from="1476254139042" duration="217000" />
       <workItem from="1476271769951" duration="4719000" />
-      <workItem from="1476287105397" duration="847000" />
+      <workItem from="1476287105397" duration="11222000" />
     </task>
     <servers />
   </component>
@@ -669,23 +684,26 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65148000" />
+    <option name="totallyTimeSpent" value="75523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239263" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686982" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494244" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2631579" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3462604" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239263" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494244" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3971354" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49109793" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -696,11 +714,8 @@
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3971354" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2643229" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1038,6 +1053,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="106" column="43" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="43" />
+          <folding>
+            <marker date="1476102974971" expanded="true" signature="42:449" ph="..." />
+            <marker date="1476102974971" expanded="true" signature="42:476" ph="..." />
+            <marker date="1476102974971" expanded="true" signature="1564:2845" ph="{...}" />
+            <marker date="1476102974971" expanded="false" signature="2889:2900" ph=" { " />
+            <marker date="1476102974971" expanded="false" signature="2913:2919" ph=" }" />
+            <marker date="1476102974971" expanded="true" signature="2954:4219" ph="{...}" />
+            <marker date="1476102974971" expanded="true" signature="4254:5058" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1076,21 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
-          <folding>
-            <marker date="1476273569722" expanded="true" signature="54:597" ph="..." />
-            <marker date="1476273569722" expanded="false" signature="897:908" ph=" { " />
-            <marker date="1476273569722" expanded="false" signature="917:923" ph=" }" />
-            <marker date="1476273569722" expanded="true" signature="951:1733" ph="{...}" />
-            <marker date="1476273569722" expanded="true" signature="1770:2900" ph="{...}" />
-            <marker date="1476273569722" expanded="true" signature="2937:3213" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Tokenizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1114,8 +1123,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="298">
+          <caret line="181" column="36" selection-start-line="181" selection-start-column="36" selection-end-line="181" selection-end-column="36" />
+          <folding>
+            <marker date="1476298850431" expanded="true" signature="54:567" ph="..." />
+            <marker date="1476298850431" expanded="true" signature="965:1357" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="1414:2139" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="2176:2580" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="2612:3011" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="3081:5079" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="5173:5608" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="5693:6817" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="6896:7169" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="7262:7907" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="7989:8287" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="8350:8437" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="8461:9378" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="8557:8682" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="8725:8790" ph="{...}" />
+            <marker date="1476298850431" expanded="true" signature="8852:9079" ph="{...}" />
+            <marker date="1476298850431" expanded="false" signature="9117:9132" ph=" { " />
+            <marker date="1476298850431" expanded="false" signature="9162:9172" ph=" }" />
+            <marker date="1476298850431" expanded="true" signature="9211:9226" ph=" { " />
+            <marker date="1476298850431" expanded="true" signature="9261:9271" ph=" }" />
+            <marker date="1476298850431" expanded="false" signature="9309:9324" ph=" { " />
+            <marker date="1476298850431" expanded="false" signature="9362:9372" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
