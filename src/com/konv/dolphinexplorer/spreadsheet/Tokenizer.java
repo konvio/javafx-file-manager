@@ -39,8 +39,8 @@ public class Tokenizer {
     }
 
     public static class Token {
-        public final TokenType type;
-        public final String data;
+        public TokenType type;
+        public String data;
 
         public Token(TokenType type, String data) {
             this.type = type;

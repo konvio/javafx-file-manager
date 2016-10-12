@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import org.controlsfx.control.spreadsheet.GridBase;
 import org.controlsfx.control.spreadsheet.GridChange;
+import org.jgrapht.DirectedGraph;
 
 import java.math.BigInteger;
 import java.util.LinkedList;
@@ -14,6 +15,7 @@ public class SpreadsheetController implements EventHandler<GridChange> {
     private GridBase mGridBase;
     private BigInteger[][] mValues;
     private String[][] mExpressions;
+    private DirectedGraph<>
     private Tokenizer mTokenizer;
 
     public SpreadsheetController(GridBase gridBase) {
@@ -67,6 +69,10 @@ public class SpreadsheetController implements EventHandler<GridChange> {
                 case NUMBER:
                     outputStack.addLast(token);
                     break;
+                case REFERENCE:
+                    BigInteger value = getValueFromReference(token.data);
+                    outputStack.addLast(new Tokenizer.Token(Tokenizer.TokenType.NUMBER, value.toString()));
+                    break;
                 case BINARYOP:
                     operatorStack.addLast(token);
                     break;
@@ -110,18 +116,35 @@ public class SpreadsheetController implements EventHandler<GridChange> {
 
     private boolean validateSyntax(List<Tokenizer.Token> tokensStream) {
         if (!SyntaxAnalyzer.isOperatorsBetweenOperands(tokensStream)) {
-            DialogHelper.showAlert(Alert.AlertType.INFORMATION, "Spreadsheet", "Invalid input", "It seems like " +
-                    "binary operator are not between two operands.");
+            DialogHelper.showAlert(Alert.AlertType.WARNING, "Spreadsheet", "Invalid input",
+                    "Binary operator is not between two operands");
             return false;
         } else if (!SyntaxAnalyzer.isBracesBalansed(tokensStream)) {
-            DialogHelper.showAlert(Alert.AlertType.INFORMATION, "Spreadsheet", "Invalid input", "It seems like " +
-                    "braces are not balanced");
+            DialogHelper.showAlert(Alert.AlertType.WARNING, "Spreadsheet", "Invalid input", "Braces are not balanced");
             return false;
         } else if (!SyntaxAnalyzer.isBracesProperlyPositioned(tokensStream)) {
-            DialogHelper.showAlert(Alert.AlertType.INFORMATION, "Spreadsheet", "Invalid input", "It seems like some braces are in wrong place");
+            DialogHelper.showAlert(Alert.AlertType.WARNING, "Spreadsheet", "Invalid input", "Braces incorrectly place");
+            return false;
+        } else if (!validateReferences(tokensStream)) {
+            DialogHelper.showAlert(Alert.AlertType.WARNING, "Spreadsheet", "Invalid input", "Undefined reference found");
             return false;
         }
         return true;
+    }
+
+    private boolean validateReferences(List<Tokenizer.Token> tokensStream) {
+        for (Tokenizer.Token token : tokensStream) {
+            if (token.type == Tokenizer.TokenType.REFERENCE) {
+                if (getValueFromReference(token.data) == null) return false;
+            }
+        }
+        return true;
+    }
+
+    private BigInteger getValueFromReference(String reference) {
+        int column = reference.charAt(0) - 'A';
+        int row = Integer.parseInt(reference.substring(1)) - 1;
+        return mValues[row][column];
     }
 
     public String getExpression(int row, int column) {
