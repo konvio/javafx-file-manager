@@ -4,10 +4,7 @@ import com.konv.dolphinexplorer.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToolBar;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -42,7 +39,15 @@ public class TableStage extends Stage {
         VBox.setVgrow(mSpreadsheet, Priority.ALWAYS);
 
         ToolBar toolBar = new ToolBar();
-        toolBar.getItems().add(new Label("Label"));
+        CheckBox checkBox = new CheckBox("Show Formulas");
+        checkBox.setIndeterminate(false);
+        checkBox.setSelected(false);
+        checkBox.selectedProperty().addListener((e, oldValue, newValue) -> {
+
+            mSpreadsheetController.setShowFormulas(newValue);
+            mSpreadsheetController.display();
+        });
+        toolBar.getItems().add(checkBox);
         root.getChildren().addAll(mTextField, mSpreadsheet, toolBar);
         setScene(new Scene(root, 840, 600));
         getIcons().add(new Image(Main.class.getResourceAsStream("dolphin.png")));

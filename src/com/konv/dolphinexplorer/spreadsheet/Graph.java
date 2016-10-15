@@ -9,6 +9,7 @@ import org.jgrapht.traverse.DepthFirstIterator;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -56,7 +57,6 @@ public class Graph extends DirectedPseudograph<Cell, Edge> {
         }
     }
 
-
     private void resetEvaluabilityMarks() {
         for (int row = 0; row < mCells.length; ++row) {
             for (int column = 0; column < mCells[0].length; ++column) {
@@ -83,7 +83,7 @@ public class Graph extends DirectedPseudograph<Cell, Edge> {
         }
     }
 
-    private void markUnevaluable(Cell cell) {
+    public void markUnevaluable(Cell cell) {
         for (Edge incoimingEdge : incomingEdgesOf(cell)) {
             Cell dependentCell = incoimingEdge.getSource();
             if (dependentCell.isEvaluable()) {
@@ -128,6 +128,13 @@ public class Graph extends DirectedPseudograph<Cell, Edge> {
                     outputStack.addLast(new Tokenizer.Token(Tokenizer.TokenType.NUMBER, cell.getValue().toString()));
                     break;
                 case BINARYOP:
+                    while (!isHigherPresedence(token, operatorStack.peekLast())) {
+                        String secondOperand = outputStack.removeLast().data;
+                        String firstOperand = outputStack.removeLast().data;
+                        String operator = operatorStack.removeLast().data;
+                        String result = evaluate(firstOperand, secondOperand, operator).toString();
+                        outputStack.addLast(new Tokenizer.Token(Tokenizer.TokenType.NUMBER, result));
+                    }
                     operatorStack.addLast(token);
                     break;
                 case BRACEOPEN:
@@ -163,8 +170,40 @@ public class Graph extends DirectedPseudograph<Cell, Edge> {
                 return a.multiply(b);
             case "/":
                 return a.divide(b);
+            case "^":
+                return a.pow(b.intValue());
+            case "|":
+                return a.or(b);
+            case "&":
+                return a.and(b);
             default:
                 return null;
+        }
+    }
+
+    private boolean isHigherPresedence(Tokenizer.Token firstOperator, Tokenizer.Token secondOperator) {
+        int firstPrecedence = getPrecedence(firstOperator);
+        int secondPrecedence = getPrecedence(secondOperator);
+        return firstPrecedence > secondPrecedence;
+    }
+
+    private int getPrecedence(Tokenizer.Token operator) {
+        if (operator == null) return -1;
+        switch (operator.data) {
+            case "^":
+                return 10;
+            case "*":
+            case "/":
+                return 9;
+            case "+":
+            case "-":
+                return 8;
+            case "&":
+                return 7;
+            case "|":
+                return 7;
+            default:
+                return -1;
         }
     }
 }

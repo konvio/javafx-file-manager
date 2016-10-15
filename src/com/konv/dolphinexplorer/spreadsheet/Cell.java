@@ -2,7 +2,7 @@ package com.konv.dolphinexplorer.spreadsheet;
 
 import java.math.BigInteger;
 
-public class Cell {
+public class Cell  {
 
     private int mRow;
     private int mColumn;
@@ -15,7 +15,6 @@ public class Cell {
         mRow = row;
         mIsEvaluable = false;
     }
-
 
     @Override
     public boolean equals(Object obj) {
@@ -36,8 +35,10 @@ public class Cell {
 
     @Override
     public String toString() {
+        if (!isEvaluable()) return mFormula;
         if (mValue != null) return mValue.toString();
-        else return "";
+        if (mFormula != null) return mFormula;
+        return "";
     }
 
     public void setFormula(String formula) {
@@ -60,7 +61,9 @@ public class Cell {
         mValue = value;
     }
 
-    public BigInteger getValue() {return mValue;}
+    public BigInteger getValue() {
+        return mValue;
+    }
 
     public void setEvaluable(boolean evaluated) {
         mIsEvaluable = evaluated;

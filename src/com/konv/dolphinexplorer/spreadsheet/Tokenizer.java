@@ -64,7 +64,7 @@ public class Tokenizer {
     }
 
     public enum TokenType {
-        NUMBER("-?\\d+"), BINARYOP("[+|\\-|\\*|\\/]"), REFERENCE("[A-Za-z][1-9]\\d?"),
+        NUMBER("-?\\d+"), BINARYOP("[+|\\-|\\*|\\/|\\^|\\||\\&]"), REFERENCE("[A-Za-z][1-9]\\d?"),
         WHITESPACE("\\s"), BRACEOPEN("\\("), BRACECLOSE("\\)"), INVALID(".");
 
         public final String pattern;
