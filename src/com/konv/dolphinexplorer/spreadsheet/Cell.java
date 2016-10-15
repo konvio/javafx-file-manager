@@ -41,6 +41,14 @@ public class Cell  {
         return "";
     }
 
+    public int getRow() {
+        return mRow;
+    }
+
+    public int getColumn() {
+        return mColumn;
+    }
+
     public void setFormula(String formula) {
         mFormula = formula;
     }

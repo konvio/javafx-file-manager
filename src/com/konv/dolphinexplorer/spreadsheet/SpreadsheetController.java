@@ -61,17 +61,21 @@ public class SpreadsheetController implements EventHandler<GridChange> {
 
     private boolean isSyntaxValid(List<Tokenizer.Token> tokensStream) {
         if (!SyntaxAnalyzer.isOperatorsBetweenOperands(tokensStream)) {
-            DialogHelper.showAlert(Alert.AlertType.WARNING, "Spreadsheet", "Invalid input",
-                    "Binary operator is not between two operands");
+            DialogHelper.showAlert(Alert.AlertType.WARNING, "Spreadsheet", "Invalid syntax",
+                    "Operators and operands incorrectly placed");
             return false;
         } else if (!SyntaxAnalyzer.isBracesBalansed(tokensStream)) {
-            DialogHelper.showAlert(Alert.AlertType.WARNING, "Spreadsheet", "Invalid input", "Braces are not balanced");
+            DialogHelper.showAlert(Alert.AlertType.WARNING, "Spreadsheet", "Invalid syntax", "Braces are not balanced");
             return false;
         } else if (!SyntaxAnalyzer.isBracesProperlyPositioned(tokensStream)) {
-            DialogHelper.showAlert(Alert.AlertType.WARNING, "Spreadsheet", "Invalid input", "Braces incorrectly place");
+            DialogHelper.showAlert(Alert.AlertType.WARNING, "Spreadsheet", "Invalid syntax", "Braces incorrectly place");
             return false;
         }
         return true;
+    }
+
+    public String getCellsJson() {
+        return mGraph.getJsonString();
     }
 
     public Cell getCell(int row, int column) {

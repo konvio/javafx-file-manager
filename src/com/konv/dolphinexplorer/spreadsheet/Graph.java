@@ -6,10 +6,11 @@ import org.jgrapht.event.TraversalListenerAdapter;
 import org.jgrapht.event.VertexTraversalEvent;
 import org.jgrapht.graph.DirectedPseudograph;
 import org.jgrapht.traverse.DepthFirstIterator;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -128,7 +129,7 @@ public class Graph extends DirectedPseudograph<Cell, Edge> {
                     outputStack.addLast(new Tokenizer.Token(Tokenizer.TokenType.NUMBER, cell.getValue().toString()));
                     break;
                 case BINARYOP:
-                    while (!isHigherPresedence(token, operatorStack.peekLast())) {
+                    while (!isHigherPrecedence(token, operatorStack.peekLast())) {
                         String secondOperand = outputStack.removeLast().data;
                         String firstOperand = outputStack.removeLast().data;
                         String operator = operatorStack.removeLast().data;
@@ -181,7 +182,7 @@ public class Graph extends DirectedPseudograph<Cell, Edge> {
         }
     }
 
-    private boolean isHigherPresedence(Tokenizer.Token firstOperator, Tokenizer.Token secondOperator) {
+    private boolean isHigherPrecedence(Tokenizer.Token firstOperator, Tokenizer.Token secondOperator) {
         int firstPrecedence = getPrecedence(firstOperator);
         int secondPrecedence = getPrecedence(secondOperator);
         return firstPrecedence > secondPrecedence;
@@ -204,6 +205,36 @@ public class Graph extends DirectedPseudograph<Cell, Edge> {
                 return 7;
             default:
                 return -1;
+        }
+    }
+
+    public String getJsonString() {
+        JSONArray cells = new JSONArray();
+        for (Cell cell : vertexSet()) {
+            JSONObject cellJson = new JSONObject();
+            cellJson.put("row", cell.getRow());
+            cellJson.put("column", cell.getColumn());
+            cellJson.put("formula", cell.getFormula());
+            cells.put(cellJson);
+        }
+        return cells.toString();
+    }
+
+    public void restoreCellsFromJson(String jsonCells) {
+        try {
+            JSONArray cells = new JSONArray(jsonCells);
+            for (Object jsonCell : cells) {
+                JSONObject currentCell = (JSONObject) jsonCell;
+                int row = currentCell.getInt("int");
+                int column = currentCell.getInt("column");
+                String formula = currentCell.getString("formula");
+                Cell cell = getCell(row, column);
+                cell.setFormula(formula);
+                resolveDependencies(cell);
+            }
+            evaluate();
+        } catch (Exception e) {
+
         }
     }
 }

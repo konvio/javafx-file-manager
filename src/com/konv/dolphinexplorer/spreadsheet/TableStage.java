@@ -10,8 +10,13 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.controlsfx.control.spreadsheet.*;
+import org.controlsfx.tools.Platform;
+
+import java.io.File;
+import java.io.PrintWriter;
 
 public class TableStage extends Stage {
 
@@ -39,18 +44,21 @@ public class TableStage extends Stage {
         VBox.setVgrow(mSpreadsheet, Priority.ALWAYS);
 
         ToolBar toolBar = new ToolBar();
-        CheckBox checkBox = new CheckBox("Show Formulas");
-        checkBox.setIndeterminate(false);
-        checkBox.setSelected(false);
-        checkBox.selectedProperty().addListener((e, oldValue, newValue) -> {
+        ToggleButton toggleButton = new ToggleButton("Show Formulas");
+        toggleButton.setSelected(false);
+        toggleButton.selectedProperty().addListener((e, oldValue, newValue) -> {
 
             mSpreadsheetController.setShowFormulas(newValue);
             mSpreadsheetController.display();
         });
-        toolBar.getItems().add(checkBox);
+
+        Button saveButton = new Button("Save");
+        saveButton.setOnMouseClicked(e -> saveSpreadsheet());
+        toolBar.getItems().addAll(toggleButton, saveButton);
         root.getChildren().addAll(mTextField, mSpreadsheet, toolBar);
         setScene(new Scene(root, 840, 600));
         getIcons().add(new Image(Main.class.getResourceAsStream("dolphin.png")));
+        setTitle("Spreadsheet");
     }
 
     private void initSpreadsheet() {
@@ -77,6 +85,17 @@ public class TableStage extends Stage {
         int focusedRow = mSpreadsheet.getSelectionModel().getFocusedCell().getRow();
         int focusedColumn = mSpreadsheet.getSelectionModel().getFocusedCell().getColumn();
         mTextField.setText(mSpreadsheetController.getCell(focusedRow, focusedColumn).getFormula());
+    }
+
+    private void saveSpreadsheet() {
+        FileChooser fileChooser = new FileChooser();
+        File file = fileChooser.showSaveDialog(this);
+        try (PrintWriter out = new PrintWriter(file)) {
+            out.println(mSpreadsheetController.getCellsJson());
+        } catch (Exception e) {
+
+        }
+        close();
     }
 }
 
