@@ -27,8 +27,8 @@ Every text field shows current path and can be used to enter advanced quick comm
 
 ##Advanced operations
 Advanced commands are entered to text fields and are applied to corresponding pane.
-**_<command> ::= <keywork> <argument>_**  
-**_<argument> ::= <regex> | <word to find>_**  
+**_< command> ::= < keyword> < argument>_**  
+**_< argument> ::= < regex> | < word to find>_**  
 For example, command **_copy .\*mus.\*_** copies all files that contains _mus_.
 
 ![delete_demo](http://i.imgur.com/8IOO58d.png)
