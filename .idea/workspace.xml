@@ -6,19 +6,38 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Cell.java" line="36" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_json_json_20160810.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/controlsfx-8.40.12-javadoc.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/controlsfx-8.40.12-sources.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/controlsfx-8.40.12.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jgrapht-core-1.0.0-javadoc.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jgrapht-core-1.0.0-sources.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jgrapht-core-1.0.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/json-20160810-javadoc.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/json-20160810-sources.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/json-20160810.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Diagrams.vsdx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Cell.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Edge.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Graph.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SyntaxAnalyzer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Tokenizer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/TokenizerTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DolphinExplorer/com/konv/dolphinexplorer/DialogHelper.class" afterPath="$PROJECT_DIR$/out/production/DolphinExplorer/com/konv/dolphinexplorer/DialogHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DolphinExplorer/com/konv/dolphinexplorer/Main.class" afterPath="$PROJECT_DIR$/out/production/DolphinExplorer/com/konv/dolphinexplorer/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DolphinExplorer.iml" afterPath="$PROJECT_DIR$/DolphinExplorer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/DialogHelper.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/DialogHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/Main.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Cell.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Cell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Graph.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java" afterPath="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,39 +96,21 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Cell.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Cell.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="687">
-                  <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#1276#1277#0" expanded="true" />
-                    <element signature="e#1311#1312#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1309">
+                <caret line="77" column="49" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -130,18 +131,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/WatchServiceHelper.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/PaneControlller.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/FileOperationsTest.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/TextEditor.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/FileHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/FileView.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/SystemIconsHelper.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/FileHelperTest.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/ApplicationTest.java" />
-        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/DialogHelper.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/StringHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/ListView.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Token.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Stage.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetStage.java" />
@@ -150,16 +147,22 @@
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/ArrayTableView.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadSheet.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Spreadsheet.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/TokenizerTest.java" />
-        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SyntaxAnalyzer.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Edge.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Tokenizer.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Cell.java" />
-        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Graph.java" />
-        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java" />
         <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/datamodel/BookModel.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/datamodel/DataStage.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Graph.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SyntaxAnalyzer.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/TokenizerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/DialogHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/FileView.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/WatchServiceHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/ListView.java" />
+        <option value="$PROJECT_DIR$/src/com/konv/dolphinexplorer/Main.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -238,95 +241,6 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DolphinExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DolphinExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DolphinExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DolphinExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DolphinExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dolphinexplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DolphinExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DolphinExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dolphinexplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DolphinExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DolphinExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dolphinexplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spreadsheet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
-      <pane id="PackagesPane">
         <subPane />
       </pane>
       <pane id="Scope">
@@ -365,10 +279,16 @@
         </subPane>
         <subPane subId="Tests" />
       </pane>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -686,63 +606,86 @@
       <workItem from="1476425007111" duration="8668000" />
       <workItem from="1476513643998" duration="21035000" />
       <workItem from="1476539280278" duration="6089000" />
-      <workItem from="1476553308607" duration="625000" />
+      <workItem from="1476553308607" duration="658000" />
+      <workItem from="1476603285695" duration="2057000" />
+      <workItem from="1476763371494" duration="118000" />
+      <workItem from="1476805644059" duration="1092000" />
+      <workItem from="1476868854813" duration="4967000" />
+      <workItem from="1476887375432" duration="362000" />
+      <workItem from="1477123146279" duration="13000" />
+      <workItem from="1477409440946" duration="638000" />
+      <workItem from="1477485120959" duration="3500000" />
+      <workItem from="1477547026457" duration="4385000" />
+      <workItem from="1477656261375" duration="432000" />
+      <workItem from="1477946306282" duration="975000" />
+      <workItem from="1477982900340" duration="165000" />
+      <workItem from="1478083988459" duration="74000" />
+      <workItem from="1478105667831" duration="463000" />
+      <workItem from="1478108155014" duration="363000" />
+      <workItem from="1478155620574" duration="2138000" />
+      <workItem from="1478158140555" duration="125000" />
+      <workItem from="1478158645785" duration="357000" />
+      <workItem from="1478600846766" duration="966000" />
+      <workItem from="1478886055019" duration="448000" />
+      <workItem from="1478937231859" duration="1211000" />
+      <workItem from="1478940533093" duration="3048000" />
+      <workItem from="1478955833631" duration="5673000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 51m 00s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 57m 17s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 57m 54s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 58m 07s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 58m 16s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 58m 34s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 14h 59m 07s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenizerTest - 2016.10.11 at 15h 02m 49s.xml">
-      <configuration name="TokenizerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TokenizerTest - 2016.10.11 at 15h 03m 18s.xml">
       <configuration name="TokenizerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TokenizerTest - 2016.10.11 at 15h 14m 07s.xml">
       <configuration name="TokenizerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TokenizerTest - 2016.10.27 at 08h 52m 11s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.10.27 at 09h 04m 09s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.11.03 at 08h 58m 48s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.11.03 at 09h 12m 24s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.11.03 at 09h 12m 43s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.11.03 at 09h 17m 29s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.11.03 at 09h 18m 12s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TokenizerTest - 2016.11.03 at 09h 29m 23s.xml">
+      <configuration name="TokenizerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135743000" />
+    <option name="totallyTimeSpent" value="169346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3268229" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32409972" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25761774" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32409972" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2728532" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32409972" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21702453" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22392638" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494244" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39453125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39317507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49109793" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -757,7 +700,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18975069" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -775,19 +718,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494244" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39465874" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39317507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686982" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32409972" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25107604" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3462604" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2728532" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32409972" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20204978" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22460318" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294271" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18975069" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -804,56 +747,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Graph.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Graph.java</url>
-          <line>55</line>
-          <properties />
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Graph.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="118" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Graph.java</url>
-          <line>57</line>
-          <properties />
-          <option name="timeStamp" value="119" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="124" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="125" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java</url>
-          <line>33</line>
-          <properties />
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -866,64 +759,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/nio/file/CopyOption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="139" column="7" selection-start-line="139" selection-start-column="7" selection-end-line="139" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/nio/file/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="760" column="45" selection-start-line="760" selection-start-column="36" selection-end-line="760" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/IOException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Exception.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="121" column="11" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="477" column="30" selection-start-line="477" selection-start-column="30" selection-end-line="477" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/event/EventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/ApplicationTest.java" />
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/diagram.uml" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10393">
-          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/String.java" />
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/dolphin.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -984,41 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/WatchServiceHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="33" column="38" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/SystemIconsHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/FileHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1418">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/TextEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/StringHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" selection-start-line="4" selection-start-column="65" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1026,135 +829,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/event/CompositeEventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/event/EventHandlerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/event/BasicEventDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/event/EventDispatchChainImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/event/EventUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/control/TableCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="371" column="0" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/control/cell/CellUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="249" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="8411" column="0" selection-start-line="8411" selection-start-column="0" selection-end-line="8411" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/event/CompositeEventHandler.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/event/EventHandlerManager.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/event/BasicEventDispatcher.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/event/EventDispatchChainImpl.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/event/EventUtil.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/control/TableCell.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/control/cell/CellUtils.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/Node.java" />
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Spreadsheet.java" />
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/ArrayTableView.java" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="204">
-            <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/ApplicationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/TokenizerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/DialogHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/ListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2465">
-          <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/FileView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="45" column="64" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/security/AccessController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="370" column="31" selection-start-line="370" selection-start-column="31" selection-end-line="370" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13685">
-          <caret line="850" column="0" selection-start-line="850" selection-start-column="0" selection-end-line="850" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/security/AccessController.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/ArrayList.java" />
     <entry file="jar://$PROJECT_DIR$/lib/controlsfx-8.40.12-sources.jar!/org/controlsfx/control/spreadsheet/SpreadsheetCellEditor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1162,20 +849,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="2501" column="0" selection-start-line="2501" selection-start-column="0" selection-end-line="2501" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/event/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/Scene.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/event/Event.java" />
     <entry file="jar://$PROJECT_DIR$/lib/controlsfx-8.40.12-sources.jar!/org/controlsfx/control/spreadsheet/GridBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1190,117 +865,288 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Tokenizer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/datamodel/BookModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/datamodel/DataStage.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="119">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding>
-            <marker date="1476525387261" expanded="true" signature="168:221" ph="{...}" />
-            <marker date="1476525387261" expanded="true" signature="275:502" ph="{...}" />
-            <marker date="1476525387261" expanded="true" signature="544:666" ph="{...}" />
-            <marker date="1476525387261" expanded="false" signature="695:706" ph=" { " />
-            <marker date="1476525387261" expanded="false" signature="721:727" ph=" }" />
-            <marker date="1476525387261" expanded="false" signature="756:767" ph=" { " />
-            <marker date="1476525387261" expanded="false" signature="782:788" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SyntaxAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding>
-            <marker date="1476544812137" expanded="false" signature="54:595" ph="..." />
-            <marker date="1476544812137" expanded="false" signature="895:906" ph=" { " />
-            <marker date="1476544812137" expanded="false" signature="915:921" ph=" }" />
-            <marker date="1476544812137" expanded="true" signature="949:2198" ph="{...}" />
-            <marker date="1476544812137" expanded="true" signature="2235:3365" ph="{...}" />
-            <marker date="1476544812137" expanded="true" signature="3402:3685" ph="{...}" />
-            <marker date="1476544812137" expanded="true" signature="3722:4016" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="64" column="62" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
-          <folding>
-            <marker date="1476544812151" expanded="true" signature="54:291" ph="..." />
-            <marker date="1476544812151" expanded="true" signature="554:708" ph="{...}" />
-            <marker date="1476544812151" expanded="true" signature="765:1525" ph="{...}" />
-            <marker date="1476544812151" expanded="false" signature="1580:1591" ph=" { " />
-            <marker date="1476544812151" expanded="false" signature="1620:1626" ph=" }" />
-            <marker date="1476544812151" expanded="true" signature="1654:2232" ph="{...}" />
-            <marker date="1476544812151" expanded="true" signature="2304:3042" ph="{...}" />
-            <marker date="1476544812151" expanded="false" signature="3076:3087" ph=" { " />
-            <marker date="1476544812151" expanded="false" signature="3117:3123" ph=" }" />
-            <marker date="1476544812151" expanded="false" signature="3169:3180" ph=" { " />
-            <marker date="1476544812151" expanded="false" signature="3215:3221" ph=" }" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="5" selection-start-line="6" selection-start-column="36" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="151" column="20" selection-start-line="151" selection-start-column="20" selection-end-line="151" selection-end-column="20" />
+        <state relative-caret-position="2499">
+          <caret line="165" column="21" selection-start-line="165" selection-start-column="21" selection-end-line="165" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/codeStyleSettings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/DolphinExplorer/com/konv/dolphinexplorer/ListView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SpreadsheetController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Tokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="92" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/TableStage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/SyntaxAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/ApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
-            <marker date="1476544051619" expanded="true" signature="54:567" ph="..." />
-            <marker date="1476544051619" expanded="true" signature="963:1394" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="1438:1593" ph="{...}" />
-            <marker date="1476544051619" expanded="false" signature="1639:1650" ph=" { " />
-            <marker date="1476544051619" expanded="false" signature="1677:1683" ph=" }" />
-            <marker date="1476544051619" expanded="true" signature="1732:2040" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="2084:2299" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="2339:2512" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="2555:2871" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="2916:3195" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="3224:3834" ph="{...}" />
-            <marker date="1476544051619" expanded="false" signature="3503:3634" ph="(TraversalListenerAdapter) vertexFinished(e) → {" />
-            <marker date="1476544051619" expanded="false" signature="3753:3768" ph="}" />
-            <marker date="1476544051619" expanded="true" signature="3877:3957" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="4027:6550" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="6644:7254" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="7358:7538" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="7596:8020" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="8056:8432" ph="{...}" />
-            <marker date="1476544051619" expanded="true" signature="8489:9069" ph="{...}" />
+            <marker date="1474404381523" expanded="false" signature="47:589" ph="..." />
+            <marker date="1474404381523" expanded="true" signature="771:1083" ph="{...}" />
+            <marker date="1474404381523" expanded="true" signature="1144:1692" ph="{...}" />
+            <marker date="1474404381523" expanded="true" signature="1748:2065" ph="{...}" />
+            <marker date="1474404381523" expanded="true" signature="2110:2305" ph="{...}" />
+            <marker date="1474404381523" expanded="true" signature="2352:2524" ph="{...}" />
+            <marker date="1474404381523" expanded="true" signature="2575:2701" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/spreadsheet/Cell.java">
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/test/TokenizerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+        <state relative-caret-position="204">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/ListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="137" column="44" selection-start-line="137" selection-start-column="44" selection-end-line="137" selection-end-column="44" />
           <folding>
-            <element signature="e#1276#1277#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
+            <marker date="1478956671247" expanded="false" signature="42:449" ph="..." />
+            <marker date="1478956671247" expanded="true" signature="722:1953" ph="{...}" />
+            <marker date="1478956671247" expanded="true" signature="1652:1866" ph="{...}" />
+            <marker date="1478956671247" expanded="true" signature="1761:1856" ph="{...}" />
+            <marker date="1478956671247" expanded="true" signature="1981:2163" ph="{...}" />
+            <marker date="1478956671247" expanded="false" signature="2200:2211" ph=" { " />
+            <marker date="1478956671247" expanded="false" signature="2229:2235" ph=" }" />
+            <marker date="1478956671247" expanded="true" signature="2274:2498" ph="{...}" />
+            <marker date="1478956671247" expanded="false" signature="2530:2541" ph=" { " />
+            <marker date="1478956671247" expanded="false" signature="2568:2574" ph=" }" />
+            <marker date="1478956671247" expanded="true" signature="2613:2979" ph="{...}" />
+            <marker date="1478956671247" expanded="true" signature="3024:3617" ph="{...}" />
+            <marker date="1478956671247" expanded="true" signature="3660:3832" ph="{...}" />
+            <marker date="1478956671247" expanded="true" signature="3870:4258" ph="{...}" />
+            <marker date="1478956671247" expanded="true" signature="4299:4745" ph="{...}" />
+            <marker date="1478956671247" expanded="true" signature="4771:5026" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/StringHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <marker date="1474965736550" expanded="true" signature="129:328" ph="{...}" />
+            <marker date="1474965736550" expanded="false" signature="378:389" ph=" { " />
+            <marker date="1474965736550" expanded="false" signature="429:435" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/FileHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1417">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <marker date="1474231355697" expanded="false" signature="42:314" ph="..." />
+            <marker date="1474231355697" expanded="true" signature="403:1370" ph="{...}" />
+            <marker date="1474231355697" expanded="true" signature="1441:2188" ph="{...}" />
+            <marker date="1474231355697" expanded="true" signature="2239:3484" ph="{...}" />
+            <marker date="1474231355697" expanded="true" signature="3538:4182" ph="{...}" />
+            <marker date="1474231355697" expanded="true" signature="4231:4850" ph="{...}" />
+            <marker date="1474231355697" expanded="true" signature="4895:5471" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/SystemIconsHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <marker date="1474315875352" expanded="false" signature="42:342" ph="..." />
+            <marker date="1474315875352" expanded="true" signature="446:1073" ph="{...}" />
+            <marker date="1474315875352" expanded="false" signature="536:551" ph=" { " />
+            <marker date="1474315875352" expanded="false" signature="572:582" ph=" }" />
+            <marker date="1474315875352" expanded="true" signature="660:1067" ph="{...}" />
+            <marker date="1474315875352" expanded="false" signature="1146:1161" ph="&lt;~&gt;" />
+            <marker date="1474315875352" expanded="true" signature="1217:1394" ph="{...}" />
+            <marker date="1474315875352" expanded="true" signature="1471:1625" ph="{...}" />
+            <marker date="1474315875352" expanded="true" signature="1678:2658" ph="{...}" />
+            <marker date="1474315875352" expanded="true" signature="2732:3027" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/TextEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-227">
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <folding>
+            <marker date="1474129176017" expanded="false" signature="42:459" ph="..." />
+            <marker date="1474129176017" expanded="true" signature="582:1216" ph="{...}" />
+            <marker date="1474129176017" expanded="true" signature="1250:1687" ph="{...}" />
+            <marker date="1474129176017" expanded="true" signature="1716:1961" ph="{...}" />
+            <marker date="1474129176017" expanded="true" signature="1987:2147" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/WatchServiceHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <marker date="1478956611405" expanded="false" signature="42:123" ph="..." />
+            <marker date="1478956611405" expanded="true" signature="393:1311" ph="{...}" />
+            <marker date="1478956611405" expanded="true" signature="1374:1812" ph="{...}" />
+            <marker date="1478956611405" expanded="false" signature="1841:1852" ph=" { " />
+            <marker date="1478956611405" expanded="false" signature="1897:1903" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="17">
+          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+          <folding>
+            <marker date="1478956803611" expanded="false" signature="42:420" ph="..." />
+            <marker date="1478956803611" expanded="true" signature="1508:2789" ph="{...}" />
+            <marker date="1478956803611" expanded="true" signature="2833:2844" ph=" { " />
+            <marker date="1478956803611" expanded="true" signature="2857:2863" ph=" }" />
+            <marker date="1478956803611" expanded="true" signature="2898:4163" ph="{...}" />
+            <marker date="1478956803611" expanded="true" signature="4198:4819" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/FileView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="197" column="48" selection-start-line="197" selection-start-column="48" selection-end-line="197" selection-end-column="48" />
+          <folding>
+            <marker date="1478956595882" expanded="false" signature="42:581" ph="..." />
+            <marker date="1478956595882" expanded="true" signature="1025:1982" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="2007:2418" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="2443:2854" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="2881:3017" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="3044:3284" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="3320:3465" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="3496:3636" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="3671:3803" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="3832:4110" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="4141:4998" ph="{...}" />
+            <marker date="1478956595882" expanded="false" signature="4719:4733" ph="&lt;~&gt;" />
+            <marker date="1478956595882" expanded="true" signature="5038:5321" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="5380:5528" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="5579:5821" ph="{...}" />
+            <marker date="1478956595882" expanded="true" signature="5875:7593" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/konv/dolphinexplorer/DialogHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="114" column="1" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
+          <folding>
+            <marker date="1478956612401" expanded="false" signature="42:503" ph="..." />
+            <marker date="1478956612401" expanded="true" signature="633:986" ph="{...}" />
+            <marker date="1478956612401" expanded="true" signature="1166:1923" ph="{...}" />
+            <marker date="1478956612401" expanded="true" signature="2019:2461" ph="{...}" />
+            <marker date="1478956612401" expanded="true" signature="2652:3498" ph="{...}" />
+            <marker date="1478956612401" expanded="true" signature="3617:4074" ph="{...}" />
+            <marker date="1478956612401" expanded="true" signature="4126:4469" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1309">
+            <caret line="77" column="49" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -1334,7 +1180,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>scala-sdk-2.11.8</last-edited>
+          <last-edited>scala-sdk-2.12.0-RC2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

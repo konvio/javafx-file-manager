@@ -1,62 +1,78 @@
-######Кононенко Віталій, К-24
-#Лабораторна робота №1
+#File Manager
 
-##Огляд
-Файловий менеджер підтримує повний набір стандартних операцій з файлами. Головне вікно програми містить дві панелі з можливістю копіювати та переміщувати файли між ними. Розширений набір команд доступний через текстове поле над кожною з панелей.
+##Overview
+File Manager supports all basic file operations.
+Main window contains two panes in order to copy and move selected items between them.
+Advanced operations are available via text fields above panes.
 
-##Головне вікно
+##Main window
 ![main_window](http://i.imgur.com/zFbYK3s.png)
-Головне вікно містить меню, дві файлові панелі та панель для швидкого доступу до основних операцій.
-Над кожною з файлових панелей розташовано текстове поле, яке відображає шлях до відповідної папки та надає можливість для введеня спеціальних команд.
+Main window contains two panes with corresponding text fields.
+Every text field shows current path and can be used to enter advanced quick commands. 
 
-##Файлові операції
-* Створити нову папку
+##File operations
+* Create new directory
 
-* Створити новий файл
+* Create new file
 
-* Перейменувати виділені елементи
+* Rename selected item
 
-* Видалити виділені елементи
+* Delete selected items
 
-* Копіювати виділені елементи в поточну папку іншої панелі
+* Copy selected items to directory on other pane
 
-* Перемістити виділені елементи в поточну папку іншої панелі
+* Move selected items to directory on other pane
 
-##Спеціальні команди
-Текстові команди вводяться в текстовому полі а застосовуються до відповідної панелі.
-**_<текстова команда> ::= <ключове слово> <аргумент>_**  
-**_<аргумент> ::= <регулярний вираз> | <слово для пошуку>_**  
-Наприклад, команда **_copy .\*mus.\*_** копіює всі файли, які містять частину _mus_.
+![file_operations](http://i.imgur.com/32OzK40.png)
+
+##Advanced operations
+Advanced commands are entered to text fields and are applied to corresponding pane.
+**_<command> ::= <keywork> <argument>_**  
+**_<argument> ::= <regex> | <word to find>_**  
+For example, command **_copy .\*mus.\*_** copies all files that contains _mus_.
+
+![delete_demo](http://i.imgur.com/8IOO58d.png)
 
 #####SELECT
 
-Виділити елементи, які задовольняють регулярний вираз або містять шукане слово. До виділеної групи можливо застосувати файлові операції.
-
+Select all elements that matches regex or contains entered word . 
+After selection it is possible to perform other actions.
 #####MOVE
-Застосувати команду _SELECT_ та перемістити виділених елементів до поточної папки на іншій панелі.
+Apply _SELECT_ with _moving_.
 
 #####COPY
-Застосувати команду _SELECT_ та копіювати виділених елементів до поточної папки на іншій панелі.
+Apply _SELECT_ with _copying_.
 
 #####DELETE
 
-Застосувати команду _SELECT_ та видалити виділені елементи.
+Apply _SELECT_ with _deletion_.
 
 #####OPEN
 
-Застосувати команду _SELECT_ та відкрити виділені елементи за допомогою стандартних засобів.
+Apply _SELECT_ with opening all selected items with associated programs.
 
-## HTML редактор
-При натисканні клавіші F3 можливо відкрити та редагувати виділений html файл за допомогою вбудованого редактора.
+##HTML editor
+To open HTML files with build-in editor just press *F3* with selected file.
 
-## Підрахунок слів
-При натискання відповідної клавіші на нижній панелі можливо підрахувати кількість слів у виділеному .txt файлі.
+![html_editor](http://i.imgur.com/hYbQ05i.png)
 
-## Гарячі клавіші
-F3 - відкрити HTML за допомогою редактора  
-F5 - копіювати  
-F6 - перемістити  
-Delete - видалити  
-CTRL + N - новий файл  
-CTRL + SHIFT + N - нова папка  
-SHIFT + D - перейти до текстового вікна
+##Words count
+To count words in selected .txt file, just press button *Count words*. New txt file file counted words will
+appear in the same directory.
+
+![words_count](http://i.imgur.com/EYtPArz.png)
+
+##Observing directory changes
+Background thread is used to watch active directories changes. Java Path API is used to do so in effective
+ way instead of just pulling directory for changes every time interval.
+
+## Hotkeys
+F3 - open with HTML editor  
+F5 - copy  
+F6 - move  
+Delete - delete  
+CTRL + N - new file  
+CTRL + SHIFT + N - new directory  
+SHIFT + D - focus corresponding text field
+
+######Copyright © 2016 by Vitaliy Kononenko, K-24

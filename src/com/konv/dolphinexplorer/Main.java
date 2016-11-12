@@ -1,6 +1,5 @@
 package com.konv.dolphinexplorer;
 
-import com.konv.dolphinexplorer.spreadsheet.TableStage;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -25,7 +24,6 @@ public class Main extends Application {
     private static final KeyCombination SHORTCUT_RENAME = new KeyCodeCombination(KeyCode.F6, KeyCombination.SHIFT_DOWN);
     private static final KeyCombination SHORTCUT_FOCUS_TEXT_FIELD = new KeyCodeCombination(KeyCode.D, KeyCombination.SHIFT_DOWN);
     private static final KeyCombination SHORTCUT_HTML_EDITOR = new KeyCodeCombination(KeyCode.F3);
-    private static final KeyCombination SHORTCUT_SPREADSHEET = new KeyCodeCombination(KeyCode.F2);
 
     private FileView mFileView;
 
@@ -58,8 +56,6 @@ public class Main extends Application {
                 mFileView.focusTextField();
             } else if (SHORTCUT_HTML_EDITOR.match(e)) {
                 mFileView.openHtml();
-            } else if (SHORTCUT_SPREADSHEET.match(e)) {
-                new TableStage().show();
             }
         });
 
@@ -107,8 +103,6 @@ public class Main extends Application {
     }
 
     private ToolBar getToolBar() {
-        Label labelSpreadSheet = new Label("F2 Spreadsheet");
-        labelSpreadSheet.setOnMouseClicked(e -> new TableStage().show());
         Label labelOpenAsText = new Label("F3 Edit HTML");
         labelOpenAsText.setOnMouseClicked(e -> mFileView.openHtml());
 
@@ -121,7 +115,6 @@ public class Main extends Application {
         Label labelMove = new Label("F6 Move");
         labelMove.setOnMouseClicked(e -> mFileView.move());
 
-        return new ToolBar(labelSpreadSheet, new Separator(),
-                labelCountWords, new Separator(), labelOpenAsText, new Separator(), labelCopy, new Separator(), labelMove);
+        return new ToolBar(labelCountWords, new Separator(), labelOpenAsText, new Separator(), labelCopy, new Separator(), labelMove);
     }
 }
